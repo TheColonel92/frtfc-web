@@ -1,0 +1,91 @@
+/* Header avec image de fond */
+header {
+    background-image: url('../img/FrTFCAirParade-overlay.png'); /* Image de fond */
+    background-size: cover; /* Couvre l'intégralité */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    position: relative;
+}
+
+/* Effet d'ombre pour le texte */
+header .overlay {
+    background: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Styles des boutons */
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+header nav a:hover {
+    background: white;
+    color: black;
+}
+
+
+/* Image des membres */
+.member-img {
+    width: 100px; /* Taille des photos */
+    height: 100px;
+    object-fit: cover; /* Assure que l'image s'adapte sans déformation */
+    border: 3px solid #ddd; /* Bordure légère */
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol */
+.member-img:hover {
+    transform: scale(1.1); /* Zoom léger */
+    border-color: #007bff; /* Couleur de survol */
+}
+
+/* Alignement des sections */
+#membres h4, #membres h5, #membres h6 {
+    margin-bottom: 0;
+}
+
+#membres p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #212529; /* Couleur sombre */
+    color: #ffffff; /* Texte blanc */
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer img.footer-logo {
+    width: 80px; /* Taille du logo */
+    height: auto; /* Garde les proportions */
+    display: block;
+    margin: 0 auto; /* Centre l'image */
+}
+
+footer a {
+    color: #bbbbbb; /* Lien discret */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff; /* Lien en blanc au survol */
+    text-decoration: underline;
+}
