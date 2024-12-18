@@ -1,125 +1,152 @@
-/* Header avec image de fond */
+/* Header */
 header {
-    background-image: url('../img/FrTFCAirParade-overlay.png'); /* Image de fond */
-    background-size: cover; /* Couvre l'intégralité */
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Prend toute la hauteur de l'écran */
+    background: url('../img/FrTFCAirParade-overlay.png') no-repeat center center / cover;
+    height: 100vh;
     display: flex;
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
 
-/* Effet d'ombre pour le texte */
-header .overlay {
-    background: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* Styles des boutons */
-header nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-header nav a:hover {
-    background: white;
-    color: black;
-}
-
-
-
 /* Barre de navigation */
 .navbar {
-    z-index: 1030; /* Assure que la barre est au-dessus de tout le reste */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre pour la différencier du reste */
+    z-index: 1030;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre */
 }
 
-/* Lien actif et au survol */
+section {
+    scroll-margin-top: 20px; /* Décalage pour ancrage automatique */
+}
+
+/* Liens actifs et hover */
 .navbar-nav .nav-link.active {
-    color: #007bff; /* Couleur du lien actif */
-    font-weight: bold;
+    color: #007bff;
 }
 .navbar-nav .nav-link:hover {
-    color: #0056b3; /* Couleur au survol */
+    color: #0056b3;
 }
 
-/* Logo */
-.navbar-brand img {
-    border-radius: 50%; /* Logo rond */
-    margin-right: 10px; /* Espacement après le logo */
-}
-
-
-
-/* Image des membres */
+/* Membres */
 .member-img {
-    width: 120px; /* Taille ajustée pour une image plus visible */
+    width: 120px;
     height: 120px;
     object-fit: cover;
-    border: 3px solid #ddd; /* Bordure légère */
+    border-radius: 50%;
+    border: 3px solid #ddd;
     transition: transform 0.3s ease;
 }
 
-/* Effet au survol */
 .member-img:hover {
-    transform: scale(1.1); /* Zoom léger */
-    border-color: #007bff; /* Couleur de survol */
+    transform: scale(1.1);
+    border-color: #007bff;
 }
-
-/* Titres et descriptions */
-#membres h4 {
-    margin-bottom: 5px;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-#membres p {
-    margin: 0; /* Enlève l'espace vertical */
-    font-size: 1rem;
-}
-
-#membres p.text-muted {
-    font-weight: bold; /* Met le premier rôle en avant */
-    color: #6c757d;
-}
-
-#membres p.text-secondary {
-    margin: 0;
-    color: #aaa; /* Deuxième rôle en couleur secondaire */
-}
-
-
 
 /* Footer */
 footer {
-    width: 100%;
-    background-color: #212529; /* Couleur sombre */
-    color: #ffffff; /* Texte blanc */
-    text-align: center;
-    padding: 20px 0;
+    background-color: #212529;
+    color: #fff;
+    padding: 20px;
 }
-
-footer img.footer-logo {
-    width: 80px; /* Taille du logo */
-    height: auto; /* Garde les proportions */
+footer .footer-logo {
+    width: 80px;
     display: block;
-    margin: 0 auto; /* Centre l'image */
+    margin: 0 auto;
 }
 
-footer a {
-    color: #bbbbbb; /* Lien discret */
-    transition: color 0.3s ease;
-}
 
-footer a:hover {
-    color: #ffffff; /* Lien en blanc au survol */
-    text-decoration: underline;
-}
+
+
+/* Style général pour simuler un embed Discord */
+.discord-embed {
+    background-color: #2f3136; /* Fond sombre comme Discord */
+    border-left: 5px solid #7289da; /* Bordure bleue à gauche */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 15px;
+    color: white;
+    font-family: Arial, sans-serif;
+    width: 600px;
+    margin: 20px auto; /* Centrer l'embed */
+  }
+  
+  .discord-embed .embed-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .discord-embed .embed-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .discord-embed .embed-header-text {
+    flex-grow: 1;
+  }
+  
+  .discord-embed .embed-name {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .discord-embed .embed-link {
+    color: #7289da;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .discord-embed .embed-thumbnail {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+  }
+  
+  .discord-embed .embed-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .discord-embed .embed-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .discord-embed .embed-fields {
+    margin-top: 10px;
+  }
+  
+  .discord-embed .embed-field {
+    margin-bottom: 10px;
+  }
+  
+  .discord-embed .field-title {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .discord-embed .field-description {
+    font-size: 14px;
+    color: #99aab5;
+  }
+  
+  .discord-embed .embed-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #99aab5;
+  }
+  
+  .discord-embed .footer-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .discord-embed .footer-text {
+    font-weight: bold;
+  }
+  
