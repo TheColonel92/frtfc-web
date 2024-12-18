@@ -36,6 +36,29 @@ header nav a:hover {
 
 
 
+/* Barre de navigation */
+.navbar {
+    z-index: 1030; /* Assure que la barre est au-dessus de tout le reste */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre pour la différencier du reste */
+}
+
+/* Lien actif et au survol */
+.navbar-nav .nav-link.active {
+    color: #007bff; /* Couleur du lien actif */
+    font-weight: bold;
+}
+.navbar-nav .nav-link:hover {
+    color: #0056b3; /* Couleur au survol */
+}
+
+/* Logo */
+.navbar-brand img {
+    border-radius: 50%; /* Logo rond */
+    margin-right: 10px; /* Espacement après le logo */
+}
+
+
+
 /* Image des membres */
 .member-img {
     width: 120px; /* Taille ajustée pour une image plus visible */
