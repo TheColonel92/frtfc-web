@@ -1,409 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>=FrTFC= French Tactical Forces</title>
-        <!-- Lien vers le CSS Bootstrap -->
-        <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css">
-        <!-- Icône de l'onglet -->
-        <link rel="icon" href="img/warthunder/WT_FrTFC.png">
-        <link rel="stylesheet" href="css_wt/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>=FrTFC= French Tactical Forces</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="img/warthunder/WT_FrTFC.png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 100%;
+        }
+    
+        .site-choice {
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            transition: transform 0.3s ease;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+    
+        .site-choice::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+        }
+    
+        .site-choice .card-body {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            text-align: center;
+        }
+    
+        .site-choice:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
 
-    <body>
-        <!-- Barre de navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <div class="container">
-                <!-- Logo et Titre -->
-                <a class="navbar-brand" href="#">
-                    <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" width="40" height="40" class="d-inline-block align-text-top">
-                    =FrTFC= French Tactical Forces
-                </a>
-                <!-- Bouton pour mobiles -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Liens de navigation -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#presentation">Presentation</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#evenements">Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#membres">Members</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#gallery">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#bibliotheque">Library</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contacts">Contacts</a>
-                        </li>
-                        <!-- Selection des langues -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://em-content.zobj.net/source/twitter/408/flag-united-kingdom_1f1ec-1f1e7.png" alt="" width="25" height="25" class="d-inline-block align-text-top">
-                                English
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                                <li><a class="dropdown-item" href="index.html">
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" width="50" height="50" class="d-inline-block">
+                =FrTFC= French Tactical Forces
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Language -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://em-content.zobj.net/source/twitter/408/flag-united-kingdom_1f1ec-1f1e7.png" alt="" width="25" height="25" class="d-inline-block align-text-top">
+                            English
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li>
+                                <a class="dropdown-item" href="index.html">
                                     <img src="https://em-content.zobj.net/source/twitter/408/flag-france_1f1eb-1f1f7.png" alt="" width="25" height="25" class="d-inline-block align-text-top">
                                     French
-                                </a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <!-- Menu d'accueil -->
-        <header class="text-center text-white">
-            <div class="overlay">
-                <h1 class="display-3">Welcome to =FrTFC=</h1>
-                <p class="lead">The French Tactical Forces squadron on War Thunder</p>
-                <a href="#presentation" class="btn btn-primary mt-3">Learn more</a>
-            </div>
-        </header>
-
-        <!-- Présentation -->
-        <section id="presentation" class="py-5">
-            <div class="container">
-                <h2 class="text-center">Presentation of the Squadron</h2>
-                <p class="text-center">=FrTFC= French Tactical Forces is a squadron dedicated to strategy and teamwork in War Thunder. Join us for intense battles and shared victories!</p>
-                <p class="text-center">Welcome to the FrTFC, we are a French-speaking squadron active in all combat modes. We keep all players with a high Activity rate who want to integrate and fight alongside us, from beginners wanting to learn, to experts to guide us. Especially during squadron battles!</p>
-            </div>
-        </section>
-
-        <!-- Événements -->
-        <section id="evenements" class="bg-light py-5">
-            <div class="container">
-                <h2 class="text-center">Esports Events</h2>
-                <p class="text-center">Find here the past and future events of our squadron:</p>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <img src="https://cdn.discordapp.com/attachments/912395757619925092/936973253749129226/926637185476743178.png?ex=67641cd7&is=6762cb57&hm=967ef29a59f3da3e2918d614c942c73485039074b659e4df2ef68bf39b7d5c88&" alt="SQB2022S1" class="rounded-circle member-img mb-2">
-                        Squadron Battles Season 1 2022 - Past
-                    </li>
-                    <li class="list-group-item">
-                        <img src="https://cdn.discordapp.com/emojis/970712056347099207.webp?size=44" alt="SQB2022S3" class="rounded-circle member-img mb-2">
-                        Squadron Battles Season 3 2022 - Past
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://tss.warthunder.com/index.php?action=tournament&id=15129&page_load=team&team_id=622725">
-                            <img src="https://static-tss.warthunder.com/icon_tournament/cfa31d8130bef0e6643e5de9d0a0cac9.png" alt="ProtoOlyStII" class="rounded-circle member-img mb-2">
-                        </a>
-                        Blitz-Front RBm 5x5 2022 - Past
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://tss.warthunder.com/index.php?action=tournament&id=15202&page_load=team&team_id=623618">
-                            <img src="https://static-tss.warthunder.com/icon_tournament/e65d4c415d8f7f41751b1c0415f03eae.png" alt="ProtoOlyStII" class="rounded-circle member-img mb-2">
-                        </a>
-                        Prototype OlySt II (eSports) - Past (<b>TOP 23</b>)
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://tss.warthunder.com/index.php?action=tournament&id=15203&page_load=team&team_id=623619">
-                            <img src="https://static-tss.warthunder.com/icon_tournament/614416c557d290c3e81571330d44acc6.png" alt="ProtoOlyStCupII" class="rounded-circle member-img mb-2">
-                        </a>
-                        OlySt CUP II RBm 7x7 (eSports) - Past (<b>TOP 14</b>)
-                    </li>
-                    <li class="list-group-item">
-                        <img src="https://cdn.discordapp.com/emojis/1081670961536970852.webp?size=96" alt="SQB2023S2" class="rounded-circle member-img mb-2">
-                        Squadron Battles Season 2 2023 - Past
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <!-- Membres -->
-        <section id="membres" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Our Members</h2>
-        
-                <!-- Commandant -->
-                <div class="text-center mb-5">
-                    <a href="https://warthunder.com/fr/community/userinfo/?nick=TheColonel92"><img src="img/warthunder/pp-TheColonel92.png" alt="Député" class="rounded-circle member-img mb-2"></a>
-                    <h4>TheColonel92</h4>
-                    <p class="text-muted">Commander</p>
-                    <p class="text-secondary"><a href="https://thecolonel92.github.io/portfolio/index-en.html">Student</a></p>
-                </div>
-        
-                <!-- Députés -->
-                <div class="row justify-content-center mb-4">
-                    <div class="col-md-4 text-center">
-                        <a href="https://warthunder.com/fr/community/userinfo/?nick=Red_Toundra"><img src="img/warthunder/pp-Red_Toundra.png" alt="Député" class="rounded-circle member-img mb-2"></a>
-                        <h5>Red_Toundra</h5>
-                        <p class="text-muted">clan/deputy</p>
-                        <p class="text-secondary"></p>
-                    </div>
-                </div>
-        
-                <!-- Officiers -->
-                <div class="row justify-content-center mb-4">
-                    <div class="col-md-3 text-center">
-                        <a href="https://warthunder.com/fr/community/userinfo/?nick=julien_1110"><img src="img/warthunder/pp-julien_1110.png" alt="Officier" class="rounded-circle member-img mb-2"></a>
-                        <h6>julien_1110</h6>
-                        <p class="text-muted">Officer</p>
-                        <p class="text-secondary"></p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <a href="https://warthunder.com/fr/community/userinfo/?nick=TeRz_______"><img src="img/warthunder/pp-TeRz_______.png" alt="Officier" class="rounded-circle member-img mb-2"></a>
-                        <h6>TeRz_______</h6>
-                        <p class="text-muted">Officer</p>
-                        <p class="text-secondary"></p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <a href="https://warthunder.com/fr/community/userinfo/?nick=chara27"><img src="img/warthunder/pp-chara27.png" alt="Officier" class="rounded-circle member-img mb-2"></a>
-                        <h6>chara27</h6>
-                        <p class="text-muted">Officer</p>
-                        <p class="text-secondary"></p>
-                    </div>
-                </div>
-        
-                <!-- Sergents -->
-                <div class="row justify-content-center mb-4">
-                    <div class="col-md-3 text-center">
-                        <a href="https://warthunder.com/fr/community/userinfo/?nick=Petit_Patate_"><img src="img/warthunder/pp-Petit_Patate_.png" alt="Sergent" class="rounded-circle member-img mb-2"></a>
-                        <h6>Petit_Patate_</h6>
-                        <p class="text-muted">Sergent</p>
-                        <p class="text-secondary"></p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <a href="https://warthunder.com/fr/community/userinfo/?nick=Wolf_Max_"><img src="img/warthunder/pp-Wolf_Max_.png" alt="Sergent" class="rounded-circle member-img mb-2"></a>
-                        <h6>Wolf_Max_</h6>
-                        <p class="text-muted">Sergent</p>
-                        <p class="text-secondary">High school student</p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <a href="https://warthunder.com/fr/community/userinfo/?nick=Splouplou"><img src="..." alt="Sergent" class="rounded-circle member-img mb-2"></a>
-                        <h6>Splouplou</h6>
-                        <p class="text-muted">Sergent</p>
-                        <p class="text-secondary"></p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <a href="https://warthunder.com/fr/community/userinfo/?nick=PleinDeBoeuf"><img src="..." alt="Sergent" class="rounded-circle member-img mb-2"></a>
-                        <h6>PleinDeBoeuf</h6>
-                        <p class="text-muted">Sergent</p>
-                        <p class="text-secondary"></p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <a href="https://warthunder.com/fr/community/userinfo/?nick=Lion974"><img src="img/warthunder/pp-Lion974.png" alt="Sergent" class="rounded-circle member-img mb-2"></a>
-                        <h6>Lion974</h6>
-                        <p class="text-muted">Sergent</p>
-                    </div>
-                </div>
-        
-                <!-- Membres -->
-                <div class="row justify-content-center">
-                    <div class="col-md-3 mb-4 text-center">
-                        <img src="https://avatars.warthunder.com/img/cardicon_fr_modern_01.png" alt="Membre" class="rounded-circle member-img mb-2">
-                        <h6>L2Son_</h6>
-                        <p class="text-muted">Member</p>
-                        <p class="text-secondary">Aeronautical Mechanic</p>
-                    </div>
-                    <div class="col-md-3 mb-4 text-center">
-                        <img src="https://avatars.warthunder.com/img/cardicon_fr_modern_01.png" alt="Membre" class="rounded-circle member-img mb-2">
-                        <h6>-Shorty74-</h6>
-                        <p class="text-muted">Member</p>
-                        <p class="text-secondary">Aeronautical Mechanic</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Gallery -->
-        <section id="gallery" class="bg-light py-5">
-            <div class="container text-center">
-                <h2 class="mb-4">Gallery</h2>
-                <p>Here are some images of our past battles and events:</p>
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="img/warthunder/FrTFCParade-overlay.png" class="d-block w-100" alt="Parade">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/warthunder/FrTFCAirParade-overlay.png" class="d-block w-100" alt="AirParade">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bibliothèque -->
-        <section id="bibliotheque" class="bg-light py-5">
-            <div class="container">
-                <h2 class="text-center">Library</h2>
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                            Game help
-                        </button></h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <!-- Généralités -->
-                                <div class="accordion" id="accordionPanelsStayOpenExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne-One" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne-One">
-                                            Generality
-                                        </button></h2>
-                                        <div id="panelsStayOpen-collapseOne-One" class="accordion-collapse collapse">
-                                            <div class="accordion-body">
-                                                <!-- Explication gamemode Arcade -->
-                                                <div class="discord-embed">
-                                                    <!-- Partie supérieure de l'embed : icône, nom, lien -->
-                                                    <div class="embed-header">
-                                                        <!-- Icône -->
-                                                        <img src="" alt="Icône" class="embed-icon">
-                                                        <!-- Nom, Lien -->
-                                                        <div class="embed-header-text">
-                                                            <span class="embed-name">
-                                                                
-                                                            </span>
-                                                            <a href="" target="_blank" class="embed-link">
-                                                                
-                                                            </a>
-                                                        </div>
-                                                        <img src="https://probot.media/bT1BpEJtGy.png" alt="Thumbnail" class="embed-thumbnail">
-                                                    </div>
-                                                    <!-- Titre de l'embed -->
-                                                    <div class="embed-title">Qu'est-ce que le mode Arcade ou AB ?</div>
-                                                    <!-- Description de l'embed -->
-                                                    <div class="embed-description">
-                                                        
-                                                    </div>
-                                                    <!-- Champs -->
-                                                    <div class="embed-fields">
-                                                        <div class="embed-field">
-                                                            <div class="field-title">__Aviation :__</div>
-                                                            <div class="field-description">En aviation, le mode arcade est un mode de jeu dans lequel le modèle de vol et de déplacement des appareils sont simplifiés.<br>
-                                                                Les véhicules et cartes du mode ne sont pas liés à des événements historiques.<br>
-                                                                Les joueurs sont divisés en équipes comme pour les batailles réalistes mais les avions de toutes les nations peuvent combattre dans chaque équipe.</div>
-                                                        </div>
-                                                        <div class="embed-field">
-                                                            <div class="field-title">__Forces terrestres :__</div>
-                                                            <div class="field-description">
-                                                                Les batailles AB Ground est un mode incluant des véhicules terrestres avec la possibilité d'utiliser des appareils aériens via un système d'événement aléatoire.<br>
-                                                                Des marqueurs sont présents pour différencier les alliées des ennemies.<br>
-                                                                La mobilité des véhicules est moins complexe qu'en mode Réaliste.<br>
-                                                                Les véhicules de toutes les nations peuvent être présentes dans chaque équipe.<br>
-                                                                ⚠️Le nombre maximum de réapparition est limité à 3.
-                                                            </div>
-                                                        </div>
-                                                        <div class="embed-field">
-                                                            <div class="field-title">__Assaut aérien/Assaut au sol :__</div>
-                                                            <div class="field-description">
-                                                                En mode assaut aérien, les mêmes règles qu'en arcade s'appliquent aux modèles de vol et de dégâts et au réarmement en vol.<br>
-                                                                Ce qui est différent, c'est que ce mode est pour une équipe aléatoire ou prédéfinie de 10 et nécessite au moins un travail d'équipe.<br>
-                                                                ⚠️Il existe également un nombre illimité de réapparitions à un coût de réparation de 80% AB Silver Lion.<br>
-                                                                <br>L'objectif principal est de défendre la base de votre équipe contre les vagues croissantes (15 en assaut aérien ou 11 en assaut au sol) de bombardiers, de chasseurs et d'obusiers ennemis contrôlés par l'IA ou de chars et de combattants en assaut au sol.<br>
-                                                                Les artilleurs du bombardier sont actifs mais la plupart des chasseurs et des obusiers ne constituent pas une menace directe pour le joueur.
-                                                            </div>
-                                                        </div>
-                                                        <div class="embed-field">
-                                                            <div class="field-title">__Forces navales :__</div>
-                                                            <div class="field-description">
-                                                                Les batailles navales en arcade sont un mode réservé aux navires et aux aéronefs.<br>
-                                                                <br>Vous pouvez apparaître en tant que navire de guerre jusqu'à 3 fois (tous les navires de réserve peuvent être réapparus gratuitement jusqu'à 3 fois sans avoir besoin de véhicules de secours.)<br>
-                                                                <br>Le mode utilise un système de points d'apparitions gagnés en réalisant des actions spécifiques au combat.<br>Ces points peuvent être utilisés pour apparaitre avec un aéronef.<br>
-                                                                En début de partie ces points sont inférieurs à celui requis pour pouvoir piloter.<br>
-                                                                <br>Des marqueurs sont présents pour différencier les alliées des ennemies.<br>
-                                                                Les caractéristiques de manoeuvrabilité des véhicules sont moins complexes qu'en mode Réaliste.<br>
-                                                                <br>Les véhicules de toutes les nations peuvent être présentes dans chaque équipe.<br>
-                                                                <br>⚠️Le nombre maximum de réapparition est limité à 3 navires et 2 aéronefs.
-                                                            </div>
-                                                        </div>
-                                                        <div class="embed-field">
-                                                            <div class="field-title">__Lien vers le Wiki:__</div>
-                                                            <div class="field-description">
-                                                                [War thunder Wiki Game modes](https://wiki.warthunder.com/Category:Game_modes)
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Pied de page -->
-                                                    <div class="embed-footer">
-                                                        <img src="img/WT_FrTFC.png" alt="Icône de pied de page" class="footer-icon">
-                                                        <span class="footer-text">L'équipe FrTFC</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Escadrons -->
-                                <div class="accordion" id="accordionPanelsStayOpenExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne-Two" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne-Two">
-                                            Squadrons
-                                        </button></h2>
-                                        <div id="panelsStayOpen-collapseOne-Two" class="accordion-collapse collapse">
-                                            <div class="accordion-body">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <!-- Site Selection -->
+    <main class="text-center d-flex flex-column" style="flex: 1; background-image: url('img/FrTFC-Flag.png'); background-size: cover; background-position: center; width: 100vw; overflow-x: hidden;">
+        <h1 class="mb-5">Website Selection</h1>
+        <div class="row justify-content-center gx-4 gy-4">
+            <!-- War Thunder -->
+            <div class="col-md-5">
+                <a href="frtfc-warthunder-en.html" class="text-decoration-none">
+                    <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/warthunder/FrTFCParade-overlay.png');">
+                        <div class="card-body">
+                            <h2 class="card-title">=FrTFC= on War Thunder</h2>
+                            <p class="card-text">Air, ground, and naval battles!</p>
                         </div>
                     </div>
-                </div>
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
-                            Integration documents
-                        </button></h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contacts" class="py-5">
-            <div class="container text-center">
-                <h2>Contacts</h2>
-                <p>Join us on:</p>
-                <a href="https://warthunder.com/fr/community/claninfo/French%20tactical%20forces" class="btn btn-primary m-2" target="_blank">Squadron website</a>
-            </div>
-            <div class="container text-center">
-                <iframe src="https://discord.com/widget?id=873053215606845460&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-            </div>
-        </section>
-
-
-
-        <footer class="bg-dark text-white text-center py-3">
-            <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" class="footer-logo mb-2">
-            <p>FrTFC Headquarter &copy; 2024 TheColonel | All rights reserved.</p>
-            <p>
-                <a href="http://warthunder.com/en/registration?r=userinvite_50847164" class="text-light text-decoration-none" target="_blank">
-                    Join us for strategic battles on War Thunder
                 </a>
-            </p>
-        </footer>
+            </div>
+            <!-- Foxhole -->
+            <div class="col-md-5">
+                <a href="frtfc-foxhole-en.html" class="text-decoration-none">
+                    <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/foxhole/foxhole_banner.jpg');">
+                        <div class="card-body">
+                            <h2 class="card-title">=FrTFC= on Foxhole</h2>
+                            <p class="card-text">Strategic warfare and massive real-time battles.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
 
-        <!-- Script Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" class="footer-logo mb-2">
+        <p>FrTFC Headquarter &copy; <span id="year"></span> TheColonel | All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script pour afficher l'année actuelle dans le footer -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
 </html>
