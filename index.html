@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/warthunder/WT_FrTFC.png">
     <title>=FrTFC= French Tactical Forces</title>
+    <meta name="description" content="Site officiel de la communauté =FrTFC= French Tactical Forces.">
+    <meta name="keywords" content="FrTFC, French Tactical Forces, War Thunder, Foxhole, Holdfast, communauté, jeux vidéo, simulation militaire">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css">
-    <!-- Favicon -->
-    <link rel="icon" href="img/warthunder/WT_FrTFC.png">
     <style>
         html, body {
             height: 100%;
@@ -19,10 +20,16 @@
             display: flex;
             flex-direction: column;
         }
+
+        .navbar {
+            z-index: 1030;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre */
+        }
     
         main {
-            flex: 1;
-            display: flex;
+            padding-top: 25px;
+            flex: 1; /* Permet au main de prendre tout l'espace restant */
+            display: flex; 
             flex-direction: column;
             justify-content: center;
             background-size: cover;
@@ -30,6 +37,7 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             width: 100%;
+            padding-bottom: 25px;
         }
     
         .site-choice {
@@ -64,6 +72,18 @@
     
         .site-choice:hover {
             transform: scale(1.02);
+        }
+
+        /* Footer */
+        footer {
+            /* background-color: #212529;*/
+            color: #fff;
+            padding: 20px;
+        }
+        footer .footer-logo {
+            width: 80px;
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -114,38 +134,51 @@
     </nav>
 
     <!-- Choix de site -->
-    <main class="text-center d-flex flex-column" style="flex: 1; background-image: url('img/FrTFC-Flag.png'); background-size: cover; background-position: center; width: 100vw; overflow-x: hidden;">
-        <h1 class="mb-5">Choix du site</h1>
-        <div class="row justify-content-center gx-4 gy-4">
-            <!-- War Thunder -->
-            <div class="col-md-5">
-                <a href="frtfc-warthunder-fr.html" class="text-decoration-none">
-                    <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/warthunder/FrTFCParade-overlay.png');">
-                        <div class="card-body">
-                            <h2 class="card-title">=FrTFC= sur War Thunder</h2>
-                            <p class="card-text">Batailles aériennes, terrestres et navales !</p>
+    <section>
+        <main class="text-center d-flex flex-column" style="flex: 1; background-image: url('img/FrTFC-Flag.png'); background-size: cover; background-position: center; overflow-x: hidden;">
+            <h1 class="mb-5">Choix du site</h1>
+            <div class="row justify-content-center gx-4 gy-4">
+                <!-- War Thunder -->
+                <div class="col-md-5">
+                    <a href="frtfc-warthunder-fr.html" class="text-decoration-none">
+                        <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/warthunder/FrTFCParade-overlay.png');">
+                            <div class="card-body">
+                                <h2 class="card-title">=FrTFC= sur War Thunder</h2>
+                                <p class="card-text">Batailles aériennes, terrestres et navales !</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Foxhole -->
-            <div class="col-md-5">
-                <a href="frtfc-foxhole-fr.html" class="text-decoration-none">
-                    <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/foxhole/foxhole_banner.jpg');">
-                        <div class="card-body">
-                            <h2 class="card-title">=FrTFC= sur Foxhole</h2>
-                            <p class="card-text">Guerre stratégique et combats massifs en temps réel.</p>
+                    </a>
+                </div>
+                <!-- Foxhole -->
+                <div class="col-md-5">
+                    <a href="frtfc-foxhole-fr.html" class="text-decoration-none">
+                        <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/foxhole/foxhole_banner.jpg');">
+                            <div class="card-body">
+                                <h2 class="card-title">=FrTFC= sur Foxhole</h2>
+                                <p class="card-text">Guerre stratégique et combats massifs en temps réel.</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                <!-- Foxhole -->
+                <div class="col-md-5">
+                    <!--<a href="..." class="text-decoration-none">-->
+                        <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('https://images.steamusercontent.com/ugc/2064384299926585733/6AF67BFBC8135778129CC1F2114E22ADD19EED12/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');">
+                            <div class="card-body">
+                                <h2 class="card-title">=FrTFC= sur Holdfast</h2>
+                                <p class="card-text">A Venir !</p>
+                            </div>
+                        </div>
+                    <!--</a>-->
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
         <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" class="footer-logo mb-2">
-        <p>FrTFC Headquarter &copy; <span id="year"></span> TheColonel | Tous droits réservés.</p>
+        <p>FrTFC Headquarter &copy; 2021—<span id="year"></span> <a href="https://thecolonel92.github.io/portfolio/" target="_blank" class="text-white">TheColonel</a> | Tous droits réservés.</p>
     </footer>
 
     <!-- Bootstrap JS -->
