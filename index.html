@@ -1,191 +1,233 @@
 <!DOCTYPE html>
-<html lang="fr"> 
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/warthunder/WT_FrTFC.png">
-    <title>=FrTFC= French Tactical Forces</title>
-    <meta name="description" content="Site officiel de la communauté =FrTFC= French Tactical Forces.">
-    <meta name="keywords" content="FrTFC, French Tactical Forces, War Thunder, Foxhole, Holdfast, communauté, jeux vidéo, simulation militaire">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css">
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-    
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .navbar {
-            z-index: 1030;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre */
-        }
-    
-        main {
-            padding-top: 25px;
-            flex: 1; /* Permet au main de prendre tout l'espace restant */
-            display: flex; 
-            flex-direction: column;
-            justify-content: center;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            width: 100%;
-            padding-bottom: 25px;
-        }
-    
-        .site-choice {
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            position: relative;
-            transition: transform 0.3s ease;
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-    
-        .site-choice::before {
-            content: "";
-            position: absolute;
-            z-index: 1;
-        }
-    
-        .site-choice .card-body {
-            position: relative;
-            z-index: 2;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-            padding: 2rem;
-            text-align: center;
-        }
-    
-        .site-choice:hover {
-            transform: scale(1.02);
-        }
-
-        /* Footer */
-        footer {
-            /* background-color: #212529;*/
-            color: #fff;
-            padding: 20px;
-        }
-        footer .footer-logo {
-            width: 80px;
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/warthunder/WT_FrTFC.png" />
+  <title>=FrTFC= French Tactical Forces</title>
+  <meta name="description" content="Site officiel/ Official site of =FrTFC=" />
+  <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      z-index: 1030;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    main {
+      padding-top: 25px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: url('img/FrTFC-Flag.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      width: 100%;
+      padding-bottom: 25px;
+    }
+    .site-choice {
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      position: relative;
+      transition: transform 0.3s ease;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    .site-choice .card-body {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+      padding: 2rem;
+      text-align: center;
+    }
+    .site-choice:hover {
+      transform: scale(1.02);
+    }
+    footer {
+      color: #fff;
+      padding: 20px;
+    }
+    .footer-logo {
+      width: 80px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Barre de navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" width="50" height="50" class="d-inline-block">
-                =FrTFC= French Tactical Forces
-            </a>
-            <!-- Horloge -->
-            <div class="d-inline-block ms-3 justify-content-center">
-                <span id="time-france" class="text-light me-3"></span>
-                <span id="time-philippines" class="text-light"></span>
-            </div>
-            <script>
-                function updateTime() {
-                    const franceTime = new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit" });
-                    const philippinesTime = new Date().toLocaleString("en-PH", { timeZone: "Asia/Manila", hour: "2-digit", minute: "2-digit" });
-                    document.getElementById("time-france").textContent = `France: ${franceTime}`;
-                    document.getElementById("time-philippines").textContent = `Philippines: ${philippinesTime}`;
-                }
-                setInterval(updateTime, 1000);
-                updateTime();
-            </script>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <!-- Langue -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://em-content.zobj.net/source/twitter/408/flag-france_1f1eb-1f1f7.png" alt="" width="25" height="25" class="d-inline-block align-text-top">
-                            Français
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <li>
-                                <a class="dropdown-item" href="index-en.html">
-                                    <img src="https://em-content.zobj.net/source/twitter/408/flag-united-kingdom_1f1ec-1f1e7.png" alt="" width="25" height="25" class="d-inline-block align-text-top">
-                                    Anglais
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" width="50" height="50" class="d-inline-block" />
+        =FrTFC= French Tactical Forces
+      </a>
+      <!-- Hamburger menu for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Clock -->
+      <div class="d-inline-block ms-3 justify-content-center">
+        <span id="time-france" class="text-light me-3"></span>
+        <span id="time-philippines" class="text-light"></span>
+      </div>
+      <!-- Language Dropdown -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  🌐 <span id="current-lang">Français</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                  <li><a class="dropdown-item" href="#" onclick="setLanguage('fr')">🇫🇷 Français</a></li>
+                  <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">🇬🇧 English</a></li>
+                  <li><a class="dropdown-item" href="#" onclick="setLanguage('tl')">🇵🇭 Filipino</a></li>
                 </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="text-center d-flex flex-column">
+    <h1 class="mb-5"
+    data-lang-fr="Choix du site"
+    data-lang-en="Site Selection"
+    data-lang-tl="Piliin ang site"
+    >Choix du site</h1>
+    <!-- Site Selection -->
+    <div class="row justify-content-center gx-4 gy-4">
+      <!-- War Thunder -->
+      <div class="col-md-5">
+        <a href="frtfc-warthunder-fr.html" class="text-decoration-none">
+            <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/warthunder/FrTFCParade-overlay.png');">
+                <div class="card-body">
+                    <h2 class="card-title"
+                    data-lang-fr="=FrTFC= sur War Thunder"
+                    data-lang-en="=FrTFC= on War Thunder"
+                    data-lang-tl="=FrTFC= sa War Thunder"
+                    >=FrTFC= sur War Thunder</h2>
+                    <p class="card-text"
+                    data-lang-fr="Batailles aériennes, terrestres et navales !"
+                    data-lang-en="Air, ground and naval battles!"
+                    data-lang-tl="Mga labanan sa himpapawid, lupa at dagat!"
+                    >Batailles aériennes, terrestres et navales !</p>
+                </div>
             </div>
+        </a>
+      </div>
+      <!-- Foxhole -->
+      <div class="col-md-5">
+        <a href="frtfc-foxhole-fr.html" class="text-decoration-none">
+          <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/foxhole/foxhole_banner.jpg');">
+            <div class="card-body">
+              <h2 class="card-title"
+              data-lang-fr="=FrTFC= sur Foxhole"
+              data-lang-en="=FrTFC= on Foxhole"
+              data-lang-tl="=FrTFC= sa Foxhole"
+              >=FrTFC= sur Foxhole</h2>
+              <p class="card-text"
+              data-lang-fr="Guerre stratégique et combats massifs en temps réel."
+              data-lang-en="Strategic warfare and massive real-time battles."
+              data-lang-tl="Digmaang estratehiko at malalaking labanan sa real-time."
+              >Guerre stratégique et combats massifs en temps réel.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- Holdfast -->
+      <div class="col-md-5">
+        <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('https://images.steamusercontent.com/ugc/2064384299926585733/6AF67BFBC8135778129CC1F2114E22ADD19EED12/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');">
+          <div class="card-body">
+            <h2 class="card-title"
+            data-lang-fr="=FrTFC= sur Holdfast"
+            data-lang-en="=FrTFC= on Holdfast"
+            data-lang-tl="=FrTFC= sa Holdfast"
+            >=FrTFC= sur Holdfast</h2>
+            <p class="card-text"
+            data-lang-fr="À venir !"
+            data-lang-en="Coming soon!"
+            data-lang-tl="Malapit na!"
+            >À venir !</p>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" class="footer-logo mb-2" />
+    <p>
+        FrTFC Headquarter © 2021—<span id="year"></span> <a href="https://thecolonel92.github.io/" target="_blank" class="text-white">TheColonel</a> | <span data-lang-fr="Tous droits réservés." data-lang-en="All rights reserved." data-lang-tl="Lahat ng karapatan ay nakalaan.">Tous droits réservés.</span>
+    </p>
+  </footer>
 
-    <!-- Choix de site -->
-    <section>
-        <main class="text-center d-flex flex-column" style="flex: 1; background-image: url('img/FrTFC-Flag.png'); background-size: cover; background-position: center; overflow-x: hidden;">
-            <h1 class="mb-5">Choix du site</h1>
-            <div class="row justify-content-center gx-4 gy-4">
-                <!-- War Thunder -->
-                <div class="col-md-5">
-                    <a href="frtfc-warthunder-fr.html" class="text-decoration-none">
-                        <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/warthunder/FrTFCParade-overlay.png');">
-                            <div class="card-body">
-                                <h2 class="card-title">=FrTFC= sur War Thunder</h2>
-                                <p class="card-text">Batailles aériennes, terrestres et navales !</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Foxhole -->
-                <div class="col-md-5">
-                    <a href="frtfc-foxhole-fr.html" class="text-decoration-none">
-                        <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/foxhole/foxhole_banner.jpg');">
-                            <div class="card-body">
-                                <h2 class="card-title">=FrTFC= sur Foxhole</h2>
-                                <p class="card-text">Guerre stratégique et combats massifs en temps réel.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Foxhole -->
-                <div class="col-md-5">
-                    <!--<a href="..." class="text-decoration-none">-->
-                        <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('https://images.steamusercontent.com/ugc/2064384299926585733/6AF67BFBC8135778129CC1F2114E22ADD19EED12/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');">
-                            <div class="card-body">
-                                <h2 class="card-title">=FrTFC= sur Holdfast</h2>
-                                <p class="card-text">A Venir !</p>
-                            </div>
-                        </div>
-                    <!--</a>-->
-                </div>
-            </div>
-        </main>
-    </section>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Horloge
+    function updateTime() {
+      const franceTime = new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit" });
+      const philippinesTime = new Date().toLocaleString("en-PH", { timeZone: "Asia/Manila", hour: "2-digit", minute: "2-digit" });
+      document.getElementById("time-france").textContent = `France: ${franceTime}`;
+      document.getElementById("time-philippines").textContent = `Philippines: ${philippinesTime}`;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" class="footer-logo mb-2">
-        <p>FrTFC Headquarter &copy; 2021—<span id="year"></span> <a href="https://thecolonel92.github.io/portfolio/" target="_blank" class="text-white">TheColonel</a> | Tous droits réservés.</p>
-    </footer>
+    // Changement de langue
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script pour afficher l'année actuelle dans le footer -->
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+        const langLabel = {
+        fr: "Français",
+        en: "English",
+        tl: "Filipino"
+        };
+        document.getElementById("current-lang").textContent = langLabel[lang] || "Français";
+
+        document.querySelectorAll("[data-lang-fr]").forEach(el => {
+        el.textContent = el.getAttribute("data-lang-" + lang) || el.getAttribute("data-lang-fr");
+        });
+
+        // Mise à jour des liens
+        const links = document.querySelectorAll("a[href*='frtfc']");
+        links.forEach(link => {
+        const url = new URL(link.href, window.location.href);
+        url.pathname = url.pathname.replace(/-(fr|en|tl)\.html/, `-${lang}.html`);
+        link.href = url.pathname;
+        });
+    }
+
+    // Initialisation de la langue au chargement de la page
+    document.addEventListener("DOMContentLoaded", () => {
+        const navLang = navigator.language.slice(0, 2);
+        const supported = ["fr", "en", "tl"];
+        const lang = supported.includes(navLang) ? navLang : "fr";
+        setLanguage(lang);
+        // Ensure the year is updated when the DOM is ready
+        function updateYear() {
+            document.getElementById("year").textContent = new Date().getFullYear();
+        }
+        updateYear();
+    });
+  </script>
 </body>
 </html>
