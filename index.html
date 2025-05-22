@@ -1,233 +1,397 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="img/warthunder/WT_FrTFC.png" />
-  <title>=FrTFC= French Tactical Forces</title>
-  <meta name="description" content="Site officiel/ Official site of =FrTFC=" />
-  <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css" />
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-    .navbar {
-      z-index: 1030;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    main {
-      padding-top: 25px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-image: url('img/FrTFC-Flag.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      width: 100%;
-      padding-bottom: 25px;
-    }
-    .site-choice {
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-      position: relative;
-      transition: transform 0.3s ease;
-      border-radius: 0.5rem;
-      overflow: hidden;
-    }
-    .site-choice .card-body {
-      position: relative;
-      z-index: 2;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-      padding: 2rem;
-      text-align: center;
-    }
-    .site-choice:hover {
-      transform: scale(1.02);
-    }
-    footer {
-      color: #fff;
-      padding: 20px;
-    }
-    .footer-logo {
-      width: 80px;
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" width="50" height="50" class="d-inline-block" />
-        =FrTFC= French Tactical Forces
-      </a>
-      <!-- Hamburger menu for mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Clock -->
-      <div class="d-inline-block ms-3 justify-content-center">
-        <span id="time-france" class="text-light me-3"></span>
-        <span id="time-philippines" class="text-light"></span>
-      </div>
-      <!-- Language Dropdown -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  🌐 <span id="current-lang">Français</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Icône de l'onglet -->
+        <link rel="icon" href="https://avatars.githubusercontent.com/u/174519077?v=4">
+        <!-- Nom de l'onglet -->
+        <title>Portfolio - UNITE</title>
+        <!-- Description du site -->
+        <meta name="description" content="Portfolio de Leo Jean - Passion pour l'aviation et la science des données">
+        <!-- Mots-clés pour le référencement -->
+        <meta name="keywords" content="Portfolio, Leo Jean UNITE, Science des Données, Aviation, Technologie">
+        <!-- Lien vers le CSS Bootstrap -->
+        <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="fr">
+        <!-- Barre de navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <!-- Logo et Titre -->
+                <a class="navbar-brand" href="#">
+                    <img src="https://avatars.githubusercontent.com/u/174519077?v=4" alt="PP" width="40" height="40" class="d-inline-block">
+                    <span
+                        data-lang-fr="Portfolio de Leo Jean UNITE"
+                        data-lang-en="Portfolio of Leo Jean UNITE"
+                        data-lang-fil="Portfolio ni Leo Jean UNITE"
+                    >Portfolio de Leo Jean UNITE</span>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                  <li><a class="dropdown-item" href="#" onclick="setLanguage('fr')">🇫🇷 Français</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">🇬🇧 English</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="setLanguage('tl')">🇵🇭 Filipino</a></li>
-                </ul>
-            </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main class="text-center d-flex flex-column">
-    <h1 class="mb-5"
-    data-lang-fr="Choix du site"
-    data-lang-en="Site Selection"
-    data-lang-tl="Piliin ang site"
-    >Choix du site</h1>
-    <!-- Site Selection -->
-    <div class="row justify-content-center gx-4 gy-4">
-      <!-- War Thunder -->
-      <div class="col-md-5">
-        <a href="frtfc-warthunder-fr.html" class="text-decoration-none">
-            <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/warthunder/FrTFCParade-overlay.png');">
-                <div class="card-body">
-                    <h2 class="card-title"
-                    data-lang-fr="=FrTFC= sur War Thunder"
-                    data-lang-en="=FrTFC= on War Thunder"
-                    data-lang-tl="=FrTFC= sa War Thunder"
-                    >=FrTFC= sur War Thunder</h2>
-                    <p class="card-text"
-                    data-lang-fr="Batailles aériennes, terrestres et navales !"
-                    data-lang-en="Air, ground and naval battles!"
-                    data-lang-tl="Mga labanan sa himpapawid, lupa at dagat!"
-                    >Batailles aériennes, terrestres et navales !</p>
+                <!-- Horloge -->
+                <div class="d-inline-block ms-3 justify-content-center">
+                    <span id="time-france" class="text-light me-3"></span>
+                    <span id="time-philippines" class="text-light"></span>
+                </div>
+                <!-- Bouton pour mobiles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Liens de navigation -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Réseaux sociaux -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="socialDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://res.cloudinary.com/jobimpact/image/upload/c_limit,w_36/f_auto/q_auto/v1703068576/icones-cv/rounded/contact/blanc/icone-cv-reseaux-sociaux-blanc_joqcnq" alt="" width="25" height="25" class="d-inline-block">
+                                Social Media
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="socialDropdown">
+                                <!-- GitHub -->
+                                <li>
+                                    <a class="dropdown-item social_link-github" href="https://github.com/TheColonel92" target="_blank">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="25" height="25" class="d-inline-block align-text-top">
+                                        GitHub
+                                    </a>
+                                </li>
+                                <!-- LinkedIn -->
+                                <li>
+                                    <a class="dropdown-item social_link-linkedin" href="https://www.linkedin.com/in/lj-unite/" target="_blank">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="25" height="25" class="d-inline-block align-text-top">
+                                        LinkedIn
+                                    </a>
+                                </li>
+                                <!-- Discord -->
+                                <li>
+                                    <a class="dropdown-item social_link-discord" href="https://discord.gg/CBsSTKzjrY" target="_blank">
+                                        <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-1-1.png" alt="Discord" width="25" height="25" class="d-inline-block align-text-top">
+                                        Discord
+                                    </a>
+                                </li>
+                                <!-- Instagram -->
+                                <li>
+                                    <a class="dropdown-item social_link-ig" href="https://www.instagram.com/leoune_92/" target="_blank">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="Instagram" width="25" height="25" class="d-inline-block align-text-top">
+                                        Instagram
+                                    </a>
+                                </li>
+                                <!-- Facebook/Messenger -->
+                                <li>
+                                    <a class="dropdown-item social_link-fb" href="https://www.facebook.com/profile.php?id=100011170991125" target="_blank">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/767px-Logo_de_Facebook.png" alt="Facebook" width="25" height="25" class="d-inline-block align-text-top">
+                                        Facebook
+                                    </a>
+                                </li>
+                                <!-- Youtube -->
+                                <li>
+                                    <a class="dropdown-item social_link-yt" href="https://www.youtube.com/@ColUnite" target="_blank">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/600px-YouTube_icon_%282013-2017%29.png" alt="Youtube" width="25" height="25" class="d-inline-block align-text-top">
+                                        Youtube
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Télécharger le CV -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="CVDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://res.cloudinary.com/jobimpact/image/upload/c_limit,w_36/f_auto/q_auto/v1703078094/icones-cv/rounded/rubriques/blanc/icone-cv-profil-badge-2-blanc_oze0ha" alt="CV" width="25" height="25" class="d-inline-block">
+                                CV
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="CVDropdown">
+                                <li>
+                                    <!-- CV de Stage -->
+                                    <a class="dropdown-item" href="docs/cv/CV_Stage_Leo-Jean-UNITE_FR.pdf" target="_blank" download>
+                                        <img src="https://res.cloudinary.com/jobimpact/image/upload/c_limit,w_36/f_auto/q_auto/v1703077718/icones-cv/rounded/rubriques/icone-cv-profil-badge-2_vboljs" alt="CV" width="25" height="25" class="d-inline-block">
+                                        CV de Stage
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- CV d'Alternance -->
+                                    <a class="dropdown-item" href="docs/cv/CV_Alternance_Leo-Jean-UNITE_FR.pdf" target="_blank" download>
+                                        <img src="https://res.cloudinary.com/jobimpact/image/upload/c_limit,w_36/f_auto/q_auto/v1703077718/icones-cv/rounded/rubriques/icone-cv-profil-badge-2_vboljs" alt="CV" width="25" height="25" class="d-inline-block">
+                                        CV d'Alternance
+                                    </a>
+                                </li>
+                                <!-- CV in English -->
+                                <li>
+                                    <a class="dropdown-item" href="docs/CV_Leo-Jean-UNITE_BUT2-VCOD-FI.pdf" target="_blank" download>
+                                        <img src="https://res.cloudinary.com/jobimpact/image/upload/c_limit,w_36/f_auto/q_auto/v1703077718/icones-cv/rounded/rubriques/icone-cv-profil-badge-2_vboljs" alt="CV" width="25" height="25" class="d-inline-block">
+                                        My CV
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Langue -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="languageDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              🌐 <span id="current-lang">Français</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                              <li><a class="dropdown-item" href="#" onclick="setLanguage('fr')"><img src="https://em-content.zobj.net/source/twitter/408/flag-france_1f1eb-1f1f7.png" alt="" width="25" height="25" class="d-inline-block align-text-top"> Français</a></li>
+                              <li><a class="dropdown-item" href="#" onclick="setLanguage('en')"><img src="https://em-content.zobj.net/source/twitter/408/flag-united-kingdom_1f1ec-1f1e7.png" alt="" width="25" height="25" class="d-inline-block align-text-top"> English</a></li>
+                              <li><a class="dropdown-item" href="#" onclick="setLanguage('fil')"><img src="https://em-content.zobj.net/source/twitter/408/flag-philippines_1f1f5-1f1ed.png" alt="" width="25" height="25" class="d-inline-block align-text-top"> Filipino</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </a>
-      </div>
-      <!-- Foxhole -->
-      <div class="col-md-5">
-        <a href="frtfc-foxhole-fr.html" class="text-decoration-none">
-          <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/foxhole/foxhole_banner.jpg');">
-            <div class="card-body">
-              <h2 class="card-title"
-              data-lang-fr="=FrTFC= sur Foxhole"
-              data-lang-en="=FrTFC= on Foxhole"
-              data-lang-tl="=FrTFC= sa Foxhole"
-              >=FrTFC= sur Foxhole</h2>
-              <p class="card-text"
-              data-lang-fr="Guerre stratégique et combats massifs en temps réel."
-              data-lang-en="Strategic warfare and massive real-time battles."
-              data-lang-tl="Digmaang estratehiko at malalaking labanan sa real-time."
-              >Guerre stratégique et combats massifs en temps réel.</p>
+        </nav>
+
+        <!-- Choix de page -->
+        <section>
+            <!-- Conteneur principal -->
+            <main class="text-center d-flex flex-column" style="flex: 1; background-image: url('https://avatars.githubusercontent.com/u/174519077'); background-size: cover; background-position: center; overflow-x: hidden;">
+                <header class="text-center text-white">
+                    <div class="overlay">
+                        <h1
+                        data-lang-fr="Choix du site"
+                        data-lang-en="Site Selection"
+                        data-lang-fil="Piliin ang site"
+                        >Choix du site</h1>
+                    </div>
+                </header>
+                <!-- Conteneur pour les cartes -->
+                <div class="row justify-content-center gx-4 gy-4">
+                    <!-- Présentation -->
+                    <div class="col-md-5">
+                        <a href="page/presentation-fr.html" class="text-decoration-none">
+                            <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/DataAF.png');">
+                                <div class="card-body">
+                                    <header class="text-center text-white">
+                                        <div class="overlay">
+                                            <h4
+                                            data-lang-fr="Présentation"
+                                            data-lang-en="Presentation"
+                                            data-lang-fil="Pagpapakilala">Présentation</h4>
+                                            <p
+                                            data-lang-fr="Découvrez qui je suis, d'où je viens et mes passions."
+                                            data-lang-en="Discover who I am, where I come from, and my passions"
+                                            data-lang-fil="Alamin kung sino ako, saan ako nanggaling, at ang aking mga hilig.">Découvrez qui je suis, d'où je viens et mes passions.</p>
+                                        </div>
+                                    </header>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Expériences -->
+                    <div class="col-md-5">
+                        <a href="page/experiences-fr.html" class="text-decoration-none">
+                            <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/LFPG-GRD.jpg');">
+                                <div class="card-body">
+                                    <header class="text-center text-white">
+                                        <div class="overlay">
+                                            <h4
+                                            data-lang-fr="Expériences"
+                                            data-lang-en="Experiences"
+                                            data-lang-fil="Karanasan">Expériences</h4>
+                                            <p
+                                            data-lang-fr="Découvrez mon parcours professionnel et mes compétences."
+                                            data-lang-en="Discover my professional background and skills."
+                                            data-lang-fil="Alamin ang aking propesyonal na karanasan at mga kasanayan.">Découvrez mon parcours professionnel et mes compétences.</p>
+                                        </div>
+                                    </header>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Réalisations -->
+                    <div class="col-md-5">
+                        <a href="page/projects-fr.html" class="text-decoration-none">
+                            <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('https://avatars.githubusercontent.com/u/174519077?v=4');">
+                                <div class="card-body">
+                                    <header class="text-center text-white">
+                                        <div class="overlay">
+                                            <h4
+                                            data-lang-fr="Réalisations"
+                                            data-lang-en="Achievements"
+                                            data-lang-fil="Mga Nagawa">Réalisations</h4>
+                                            <p
+                                            data-lang-fr="Découvrez mes projets et réalisations."
+                                            data-lang-en="Discover my projects and achievements."
+                                            data-lang-fil="Alamin ang aking mga proyekto at nagawa.">Découvrez mes projets et réalisations.</p>
+                                        </div>
+                                    </header>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Contact -->
+                    <div class="col-md-5">
+                        <a href="contact.html"  class="text-decoration-none">
+                            <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/DataADP.png');">
+                                <div class="card-body">
+                                    <header class="text-center text-white">
+                                        <div class="overlay">
+                                            <h4
+                                            data-lang-fr="Contact"
+                                            data-lang-en="Contact"
+                                            data-lang-fil="Makipag-ugnayan">Contact</h4>
+                                            <p
+                                            data-lang-fr="Contactez-moi pour toute question ou collaboration."
+                                            data-lang-en="Contact me for any questions or collaborations."
+                                            data-lang-fil="Makipag-ugnayan sa akin para sa anumang mga tanong o pakikipagtulungan.">Contactez-moi pour toute question ou collaboration.</p>
+                                        </div>
+                                    </header>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+        <!-- Footer Social -->
+        <div class="social social-footer">
+            <div class="social_list-wrapper">
+                <div class="social_list">
+                    <!-- GitHub -->
+                    <a class="social_link social_link-github" href="https://github.com/TheColonel92" target="_blank">
+                        <span class="social_link-icon-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="25" height="25" class="d-inline-block align-text-top">
+                        </span>
+                        <span class="social_text-wrapper">
+                            <span class="social_link-title">GitHub</span>
+                            <span class="social_link-comment">TheColonel92</span>
+                        </span>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a class="social_link social_link-linkedin" href="https://www.linkedin.com/in/lj-unite/" target="_blank">
+                        <span class="social_link-icon-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="25" height="25" class="d-inline-block align-text-top">
+                        </span>
+                        <span class="social_text-wrapper">
+                            <span class="social_link-title">LinkedIn</span>
+                            <span class="social_link-comment">Léo Jean UNITE</span>
+                        </span>
+                    </a>
+                    <!-- Discord -->
+                    <a class="social_link social_link-discord" href="https://discord.gg/CBsSTKzjrY" target="_blank">
+                        <span class="social_link-icon-wrapper">
+                            <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-1-1.png" alt="Discord" width="25" height="25" class="d-inline-block align-text-top">
+                        </span>
+                        <span class="social_text-wrapper">
+                            <span class="social_link-title">Discord</span>
+                            <span class="social_link-comment">TheColonel's HQ</span>
+                        </span>
+                    </a>
+                    <!-- Instagram -->
+                    <a class="social_link social_link-ig" href="https://www.instagram.com/leoune_92/" target="_blank">
+                        <span class="social_link-icon-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="Instagram" width="25" height="25" class="d-inline-block align-text-top">
+                        </span>
+                        <span class="social_text-wrapper">
+                            <span class="social_link-title">Instagram</span>
+                            <span class="social_link-comment">leoune_92</span>
+                        </span>
+                    </a>
+                    <!-- Facebook/Messenger -->
+                    <a class="social_link social_link-fb" href="https://www.facebook.com/profile.php?id=100011170991125" target="_blank">
+                        <span class="social_link-icon-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/767px-Logo_de_Facebook.png" alt="Facebook" width="25" height="25" class="d-inline-block align-text-top">
+                        </span>
+                        <span class="social_text-wrapper">
+                            <span class="social_link-title">Facebook</span>
+                            <span class="social_link-comment">Léo Jean UNITE</span>
+                        </span>
+                    </a>
+                    <!-- Youtube -->
+                    <a class="social_link social_link-yt" href="https://www.youtube.com/@ColUnite" target="_blank">
+                        <span class="social_link-icon-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/600px-YouTube_icon_%282013-2017%29.png" alt="Youtube" width="25" height="25" class="d-inline-block align-text-top">
+                        </span>
+                        <span class="social_text-wrapper">
+                            <span class="social_link-title">Youtube</span>
+                            <span class="social_link-comment">Col. Unite</span>
+                        </span>
+                    </a>
             </div>
-          </div>
-        </a>
-      </div>
-      <!-- Holdfast -->
-      <div class="col-md-5">
-        <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('https://images.steamusercontent.com/ugc/2064384299926585733/6AF67BFBC8135778129CC1F2114E22ADD19EED12/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');">
-          <div class="card-body">
-            <h2 class="card-title"
-            data-lang-fr="=FrTFC= sur Holdfast"
-            data-lang-en="=FrTFC= on Holdfast"
-            data-lang-tl="=FrTFC= sa Holdfast"
-            >=FrTFC= sur Holdfast</h2>
-            <p class="card-text"
-            data-lang-fr="À venir !"
-            data-lang-en="Coming soon!"
-            data-lang-tl="Malapit na!"
-            >À venir !</p>
-          </div>
         </div>
-      </div>
-    </div>
-  </main>
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" class="footer-logo mb-2" />
-    <p>
-        FrTFC Headquarter © 2021—<span id="year"></span> <a href="https://thecolonel92.github.io/" target="_blank" class="text-white">TheColonel</a> | <span data-lang-fr="Tous droits réservés." data-lang-en="All rights reserved." data-lang-tl="Lahat ng karapatan ay nakalaan.">Tous droits réservés.</span>
-    </p>
-  </footer>
+        <!-- Footer -->
+        <footer class="footer text-center py-3" role="contentinfo">
+            <div claas="footer__wrapper">
+                <div class="footer__logotypes footer-logotypes">
+                    <!-- Logo de l'entreprise -->
+                    <a href="https://thecolonel92.github.io/">
+                        <img src="https://avatars.githubusercontent.com/u/174519077?v=4" alt="Logo UNITE" class="footer-logotypes__company">
+                    </a>
+                    <div class="footer-logotypes__list global__mobile-hidden">
+                        <!-- Logo Lycée Eugène Ionesco -->
+                         <a href="https://lyceeionesco.fr/" target="_blank">
+                            <img src="https://lyceeionesco.fr/modules/kcorrect/sign_ionesco.jpg" alt="Lycée Eugène Ionesco" class="footer-logotypes__school">
+                        </a>
+                        <!-- Logo Université Paris Cité -->
+                         <a href="https://u-paris.fr/" target="_blank">
+                            <img src="https://u-paris.fr/sante/wp-content/uploads/sites/19/2020/06/Universite_Paris_logo_horizontal.jpg" alt="Université Paris Cité" class="footer-logotypes__university">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    &copy; 2024—<span id="year"></span> 
+                    <span data-lang-fr="Leo Jean. Tous droits réservés."
+                          data-lang-en="Leo Jean. All rights reserved."
+                          data-lang-fil="Leo Jean. Lahat ng karapatan ay nakalaan.">
+                        Leo Jean. Tous droits réservés.
+                    </span>
+                </div>
+            </div>
+        </footer>
 
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Horloge
-    function updateTime() {
-      const franceTime = new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit" });
-      const philippinesTime = new Date().toLocaleString("en-PH", { timeZone: "Asia/Manila", hour: "2-digit", minute: "2-digit" });
-      document.getElementById("time-france").textContent = `France: ${franceTime}`;
-      document.getElementById("time-philippines").textContent = `Philippines: ${philippinesTime}`;
-    }
-    setInterval(updateTime, 1000);
-    updateTime();
-
-    // Changement de langue
-    function setLanguage(lang) {
-        document.documentElement.lang = lang;
-
-        const langLabel = {
-        fr: "Français",
-        en: "English",
-        tl: "Filipino"
-        };
-        document.getElementById("current-lang").textContent = langLabel[lang] || "Français";
-
-        document.querySelectorAll("[data-lang-fr]").forEach(el => {
-        el.textContent = el.getAttribute("data-lang-" + lang) || el.getAttribute("data-lang-fr");
-        });
-
-        // Mise à jour des liens
-        const links = document.querySelectorAll("a[href*='frtfc']");
-        links.forEach(link => {
-        const url = new URL(link.href, window.location.href);
-        url.pathname = url.pathname.replace(/-(fr|en|tl)\.html/, `-${lang}.html`);
-        link.href = url.pathname;
-        });
-    }
-
-    // Initialisation de la langue au chargement de la page
-    document.addEventListener("DOMContentLoaded", () => {
-        const navLang = navigator.language.slice(0, 2);
-        const supported = ["fr", "en", "tl"];
-        const lang = supported.includes(navLang) ? navLang : "fr";
-        setLanguage(lang);
-        // Ensure the year is updated when the DOM is ready
-        function updateYear() {
-            document.getElementById("year").textContent = new Date().getFullYear();
-        }
-        updateYear();
-    });
-  </script>
-</body>
+        <!-- Script Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Script pour afficher l'année actuelle dans le footer -->
+        <script>
+            const currentYear = new Date().getFullYear();
+            const startYear = 2024; // Replace with the actual start year of your portfolio
+            document.getElementById("start-year").textContent = startYear;
+            document.getElementById("year").textContent = currentYear;
+        </script>
+        <script>
+            // Horloge
+            function updateTime() {
+              const franceTime = new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit" });
+              const philippinesTime = new Date().toLocaleString("en-PH", { timeZone: "Asia/Manila", hour: "2-digit", minute: "2-digit" });
+              document.getElementById("time-france").textContent = `France: ${franceTime}`;
+              document.getElementById("time-philippines").textContent = `Philippines: ${philippinesTime}`;
+            }
+            setInterval(updateTime, 1000);
+            updateTime();
+        
+            // Changement de langue
+            function setLanguage(lang) {
+                document.documentElement.lang = lang;
+        
+                const langLabel = {
+                fr: "Français",
+                en: "English",
+                fil: "Filipino"
+                };
+                document.getElementById("current-lang").textContent = langLabel[lang] || "Français";
+                // Changer le texte des éléments
+                document.querySelectorAll("[data-lang-fr]").forEach(el => {
+                const langAttribute = el.getAttribute("data-lang-" + lang);
+                el.textContent = langAttribute !== null ? langAttribute : el.getAttribute("data-lang-fr");
+                });
+                // Changer les liens de langue
+                const links = document.querySelectorAll("a[href*='-fr.html']");
+                links.forEach(link => {
+                const url = new URL(link.href, window.location.href);
+                url.pathname = url.pathname.replace(/-(fr|en|fil)\.html/, `-${lang}.html`);
+                link.href = url.pathname;
+                });
+            }
+        
+            // Initialisation de la langue au chargement de la page
+            document.addEventListener("DOMContentLoaded", () => {
+                const navLang = navigator.language.slice(0, 2);
+                const supported = ["fr", "en", "fil"];
+                const lang = supported.includes(navLang) ? navLang : "fr";
+                setLanguage(lang);
+                // Ensure the year is updated when the DOM is ready
+                function updateYear() {
+                    document.getElementById("year").textContent = new Date().getFullYear();
+                }
+                updateYear();
+            });
+          </script>
+    </body>
 </html>
