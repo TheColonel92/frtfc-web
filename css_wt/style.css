@@ -4,7 +4,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre */
 }
 section {
-  scroll-margin-top: 70px; /* Décalage pour ancrage automatique */
+  scroll-margin-top: 50px; /* Décalage pour ancrage automatique */
 }
 /* Liens actifs et hover */
 .navbar-nav .nav-link.active {
