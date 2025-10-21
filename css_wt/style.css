@@ -101,11 +101,6 @@ header .overlay{
   color: white;
 }
 
-/*Contact*/
-#contacts {
-  background: url('../img/warthunder/FrTFC_Wallpaper.png') no-repeat center center / cover;
-}
-
 /* Footer */
 footer {
     /* background-color: #212529;*/
@@ -117,3 +112,4 @@ footer .footer-logo {
     display: block;
     margin: 0 auto;
 }
+
