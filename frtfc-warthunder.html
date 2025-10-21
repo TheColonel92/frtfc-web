@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/warthunder/WT_FrTFC.png" />
+    <title>=FrTFC= French Tactical Forces</title>
+    <meta name="description" content="Site officiel/ Official site of =FrTFC=" />
+    <meta name="keywords" content="FrTFC, French Tactical Forces, War Thunder, communauté, jeux vidéo, simulation militaire">
+    <meta name="author" content="TheColonel92">
+    <meta name="theme-color" content="#343a40">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="language" content="French">
+    <!-- Lien vers le CSS Bootstrap -->
+    <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css">
+    <!-- Icône de l'onglet -->
+    <link rel="icon" href="img/warthunder/WT_FrTFC.png">
+    <link rel="stylesheet" href="css_wt/style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <!-- Logo et Titre -->
+        <a class="navbar-brand" href="index.html">
+            <img src="img/warthunder/WT_FrTFC.png" alt="Logo =FrTFC=" width="50" height="50" class="d-inline-block">
+            =FrTFC= French Tactical Forces
+        </a>
+      <!-- Hamburger menu for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Clock -->
+      <div class="d-inline-block ms-3 justify-content-center">
+        <span id="time-france" class="text-light me-3"></span>
+        <span id="time-philippines" class="text-light"></span>
+      </div>
+      <!-- Language Dropdown -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#presentation"
+                data-lang-fr="Présentation"
+                data-lang-en="Presentation"
+                >Présentation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#evenements"
+                data-lang-fr="Événements"
+                data-lang-en="Events"
+                >Événements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#membres"
+                data-lang-fr="Membres"
+                data-lang-en="Members"
+                >Membres</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#gallery"
+                data-lang-fr="Galerie"
+                data-lang-en="Gallery"
+                >Gallerie</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#mods"
+                data-lang-fr="Mods"
+                data-lang-en="Mods"
+                >Mods</a>
+            </li>
+            <!-- Contacts -->
+            <li class="nav-item">
+                <a class="nav-link" href="#contacts"
+                data-lang-fr="Contacts"
+                data-lang-en="Contacts"
+                >Contacts</a>
+            </li>
+            <!-- Choix de site -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="siteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://cdn2.steamgriddb.com/logo/40b28f4fc90cff423e2a75266497539f.png" alt="" width="25" height="25" class="d-inline-block align-text-top">
+                    War Thunder
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="siteDropdown">
+                    <li><a class="dropdown-item" href="frtfc-foxhole-fr.html">
+                        <img src="https://static.wixstatic.com/media/dbafb3_3549fb01b9aa4bffbb21e4139b2c7300~mv2.png/v1/fill/w_499,h_197,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/NavalWarfareLogo_Large.png" alt="" width="25" height="25" class="d-inline-block align-text-top">
+                        Foxhole
+                    </a></li>
+                </ul>
+            </li>
+            <!-- Selection des langues -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    🌐 <span id="current-lang">Français</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li><a class="dropdown-item" href="#" onclick="setLanguage('fr')"><img src="https://em-content.zobj.net/source/twitter/408/flag-france_1f1eb-1f1f7.png" alt="" width="25" height="25" class="d-inline-block align-text-top"> Français</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="setLanguage('en')"><img src="https://em-content.zobj.net/source/twitter/408/flag-united-kingdom_1f1ec-1f1e7.png" alt="" width="25" height="25" class="d-inline-block align-text-top"> English</a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>   
+
+    <!-- Menu d'accueil -->
+    <header class="text-center text-white">
+        <div class="overlay">
+            <h1 class="display-3"
+                data-lang-fr="Bienvenue chez la =FrTFC="
+                data-lang-en="Welcome to =FrTFC="
+                >Bienvenue chez la =FrTFC=</h1>
+            <p class="lead"
+                data-lang-fr="L'escadron French Tactical Forces sur War Thunder"
+                data-lang-en="The French Tactical Forces squadron on War Thunder"
+                >L'escadron French Tactical Forces sur War Thunder</p>
+            <a href="#presentation" class="btn btn-primary mt-3"
+                data-lang-fr="En savoir plus"
+                data-lang-en="Learn more"
+                >En savoir plus</a>
+            <a href="https://discord.gg/CBsSTKzjrY" class="btn btn-lg mt-3" target="_blank">
+                <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-1-1.png" alt="Discord" width="50" height="50" class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </header>
+
+    <!-- Présentation -->
+    <section id="presentation" class="py-5">
+        <div class="container">
+            <h2 class="text-center"
+                data-lang-fr="Présentation de l'Escadron"
+                data-lang-en="Squadron Presentation"
+                >Présentation de l'Escadron</h2>
+            <p class="text-center"
+                data-lang-fr="=FrTFC= French Tactical Forces est un escadron dédié à la stratégie et à l'esprit d'équipe dans War Thunder. Rejoins-nous pour des combats intenses et des victoires partagées !"
+                data-lang-en="=FrTFC= French Tactical Forces is a squadron dedicated to strategy and teamwork in War Thunder. Join us for intense battles and shared victories!"
+                >=FrTFC= French Tactical Forces est un escadron dédié à la stratégie et à l'esprit d'équipe dans War Thunder. Rejoins-nous pour des combats intenses et des victoires partagées !</p>
+            <p class="text-center"
+                data-lang-fr="Bienvenue chez la FrTFC, nous sommes un escadron francophone actif dans toutes les modes de combat. Nous gardons tous joueurs avec un grand taux d'Activité et souhaitant s'intégrer et combattre à nos côtés, des débutants voulant apprendre, aux experts pour nous guider. Surtout durant les batailles d'escadrons !"
+                data-lang-en="Welcome to FrTFC, we are a French-speaking squadron active in all combat modes. We welcome all players with a high level of activity who wish to join and fight alongside us, from beginners wanting to learn to experts guiding us, especially during squadron battles!"
+                >Bienvenue chez la FrTFC, nous sommes un escadron francophone actif dans toutes les modes de combat. Nous gardons tous joueurs avec un grand taux d'Activité et souhaitant s'intégrer et combattre à nos côtés, des débutants voulant apprendre, aux experts pour nous guider. Surtout durant les batailles d'escadrons !</p>
+        </div>
+    </section>
+
+    <!-- Événements -->
+    <section id="evenements" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center" data-lang-fr="Événements Esport" data-lang-en="Esport Events">Événements Esport</h2>
+            <p class="text-center" data-lang-fr="Retrouve ici les événements passés et futurs de notre escadron :" data-lang-en="Find here the past and upcoming events of our squadron:">Retrouve ici les événements passés et futurs de notre escadron :</p>
+            <ul class="list-group">
+                <li class="list-group-item d-flex align-items-center">
+                    <div class="me-3 flex-shrink-0">
+                        <img src="https://cdn.discordapp.com/attachments/912395757619925092/936973253749129226/926637185476743178.png?ex=67641cd7&is=6762cb57&hm=967ef29a59f3da3e2918d614c942c73485039074b659e4df2ef68bf39b7d5c88" alt="SQB2022S1" class="rounded-circle event-img mb-2">
+                    </div>
+                    <div data-lang-fr="Saison 1 des Batailles d'Escadron 2022" data-lang-en="Squadron Battles Season 1, 2022">Saison 1 des Batailles d'Escadron 2022</div>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <div class="me-3 flex-shrink-0">
+                        <img src="https://cdn.discordapp.com/emojis/970712056347099207.webp?size=44" alt="SQB2022S3" class="rounded-circle event-img mb-2">
+                    </div>
+                    <div data-lang-fr="Saison 3 des Batailles d'Escadron 2022" data-lang-en="Squadron Battles Season 3, 2022">Saison 3 des Batailles d'Escadron 2022</div>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <div class="me-3 flex-shrink-0">
+                        <a href="https://tss.warthunder.com/index.php?action=tournament&id=15129&page_load=team&team_id=622725" target="_blank" class="text-decoration-none">
+                            <img src="https://static-tss.warthunder.com/icon_tournament/cfa31d8130bef0e6643e5de9d0a0cac9.png" alt="ProtoOlyStII" class="rounded-circle event-img mb-2">
+                        </a>
+                    </div>
+                    <div>Blitz-Front RBm 5x5 2022</div>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <div class="me-3 flex-shrink-0">
+                        <a href="https://tss.warthunder.com/index.php?action=tournament&id=15202&page_load=team&team_id=623618" target="_blank" class="text-decoration-none">
+                            <img src="https://static-tss.warthunder.com/icon_tournament/e65d4c415d8f7f41751b1c0415f03eae.png" alt="ProtoOlyStII" class="rounded-circle event-img mb-2">
+                        </a>
+                    </div>
+                    <div>Prototype OlySt II (eSports) - <b>TOP 23</b></div>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <div class="me-3 flex-shrink-0">
+                        <a href="https://tss.warthunder.com/index.php?action=tournament&id=15203&page_load=team&team_id=623619" target="_blank" class="text-decoration-none">
+                            <img src="https://static-tss.warthunder.com/icon_tournament/614416c557d290c3e81571330d44acc6.png" alt="ProtoOlyStCupII" class="rounded-circle event-img mb-2">
+                        </a>
+                    </div>
+                    <div>OlySt CUP II RBm 7x7 (eSports) - <b>TOP 14</b></div>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    <div class="me-3 flex-shrink-0">
+                        <img src="https://cdn.discordapp.com/emojis/1081670961536970852.webp?size=96" alt="SQB2023S2" class="rounded-circle event-img mb-2">
+                    </div>
+                    <div data-lang-fr="Saison 2 des Batailles d'Escadron 2023" data-lang-en="Squadron Battles Season 2, 2023">Saison 2 des Batailles d'Escadron 2023</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Membres Lists-->
+    <section id="membres" class="py-5">
+        <div class="container">
+            <!-- État-Major -->
+            <h2 class="text-center mb-4" data-lang-fr="État-Major" data-lang-en="Headquarters">État-Major</h2>
+            <div class="row justify-content-center mb-4">
+                <!-- Commandant -->
+                <div class="col-md-3 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=TheColonel92" target="_blank" class="text-decoration-none">
+                        <img src="img/warthunder/member/Colo.png" alt="Commandant" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h4>
+                        <span title="Philippines"><img src="img/flags/philippines.png" alt="Philippines Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        <span title="France"><span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span></span>
+                        TheColonel92
+                    </h4>
+                    <p class="text-muted" data-lang-fr="Commandant" data-lang-en="Commander">Commandant</p>
+                    <p class="text-secondary">
+                        <a href="https://thecolonel92.github.io/" target="_blank" class="text-secondary">
+                            <span data-lang-fr="Étudiant" data-lang-en="Student">Étudiant</span>
+                        </a>
+                    </p>
+                </div>
+                <!-- Députés -->
+                <div class="col-md-3 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=julien_1110" target="_blank" class="text-decoration-none">
+                        <img src="img/warthunder/pp-julien_1110.png" alt="Officier" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h5>
+                        <span title="France"><span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span></span>
+                        julien_1110
+                    </h5>
+                    <p class="text-muted" data-lang-fr="Député" data-lang-en="Deputy">Député</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+            </div>
+            <!-- Officiers -->
+            <h3 class="text-center mb-4" data-lang-fr="Officiers" data-lang-en="Officers">Officiers</h3>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=TeRz_______" target="_blank" class="text-decoration-none">
+                        <img src="img/warthunder/pp-TeRz_______.png" alt="Officer" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        TeRz_______
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Officier" data-lang-en="Officer">Officer</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=Red_Toundra" target="_blank" class="text-decoration-none">
+                        <img src="img/warthunder/member/Red.png" alt="Officer" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        Red_Toundra
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Officier" data-lang-en="Officer">Officer</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <img src="https://scontent.fcdg4-1.fna.fbcdn.net/v/t1.6435-9/70999995_117187103015525_3854287425043955712_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=nP-HTn-N9mEQ7kNvwFAaVaS&_nc_oc=AdnJeKDRA373wNwWUhlnE-vXdo-wWqvUK69oLqcBo_cPYtwoemmjtruLrlwqyGgGNYidY-dZTWF-MtsqlanTurQj&_nc_zt=23&_nc_ht=scontent.fcdg4-1.fna&_nc_gid=DjhEKUoGqXIVcHzFK5NC1A&oh=00_AfbeY78ZCFXAZ6WiFaAhX-18sGaeTMmBN11QkYvJnhRgQQ&oe=690311CF" alt="Officer" class="rounded-circle member-img mb-2">
+                    <h6>
+                        <span title="Russia"><img src="img/flags/russia.png" alt="Russia Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        <span title="US"><img src="img/flags/united-states.png" alt="US Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        <span title="Ukraine"><img src="img/flags/ukraine.png" alt="Ukraine Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        Katkova<span title="KIA 2023">🪦</span>
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Officier" data-lang-en="Officer">Officer</p>
+                    <p class="text-secondary">🪖USMC 1LT.<br>👩‍⚕️USCG Med</p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=chara27" target="_blank" class="text-decoration-none">
+                        <img src="img/warthunder/pp-chara27.png" alt="Officer" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        chara27
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Officier" data-lang-en="Officer">Officer</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=Lion974" target="_blank" class="text-decoration-none">
+                        <img src="img/warthunder/member/Lion.png" alt="Officer" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="Reunion"><img src="img/flags/reunion.png" alt="France Reunion Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        Lion974
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Officier" data-lang-en="Officer">Officer</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+            </div>
+            <!-- Sous-Officiers -->
+            <h3 class="text-center mb-4" data-lang-fr="Sous-Officier" data-lang-en="Non-Commissioned Officers">Sous-Officier</h3>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=TOTOPLANES" target="_blank" class="text-decoration-none">
+                        <img src="https://th.bing.com/th/id/OIP.RD4xYO8L1r9qiAsW2IOm8AAAAA?rs=1&pid=ImgDetMain" alt="Sergent" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        TOTOPLANES
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Sergent" data-lang-en="Sergeant">Sergent</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=Anjo_57" target="_blank" class="text-decoration-none">
+                        <img src="https://th.bing.com/th/id/OIP.RD4xYO8L1r9qiAsW2IOm8AAAAA?rs=1&pid=ImgDetMain" alt="Sergent" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="Luxembourg"><img src="img/flags/luxembourg.png" alt="Luxembourg Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        Anjo_57
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Sergent" data-lang-en="Sergeant">Sergent</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=Helasta%40psn" target="_blank" class="text-decoration-none">
+                        <img src="https://th.bing.com/th/id/OIP.RD4xYO8L1r9qiAsW2IOm8AAAAA?rs=1&pid=ImgDetMain" alt="Sergent" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        Helasta
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Sergent" data-lang-en="Sergeant">Sergent</p>
+                    <p class="text-secondary" data-lang-fr="Militaire" data-lang-en="Military Personnel">Militaire</p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=ODSTelectro0" target="_blank" class="text-decoration-none">
+                        <img src="https://th.bing.com/th/id/OIP.RD4xYO8L1r9qiAsW2IOm8AAAAA?rs=1&pid=ImgDetMain" alt="Sergent" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        ODSTelectro0
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Sergent" data-lang-en="Sergeant">Sergent</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=Wolf_Max_" target="_blank" class="text-decoration-none">
+                        <img src="img/warthunder/pp-Wolf_Max_.png" alt="Sergent" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="Serbia"><img src="img/flags/serbia.png" alt="Serbia Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        Wolf_Max_
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Sergent" data-lang-en="Sergeant">Sergent</p>
+                    <p class="text-secondary" data-lang-fr="Lycéen" data-lang-en="High School Student">Lycéen</p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=Petit_Patate_" target="_blank" class="text-decoration-none">
+                        <img src="img/warthunder/pp-Petit_Patate_.png" alt="Sergent" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        Petit_Patate_
+                        <a href="docs/wt/Dual CAE Vodk.pdf" target="_blank" class="text-decoration-none">
+                            <img src="https://res.cloudinary.com/jobimpact/image/upload/c_limit,w_72/f_auto/q_auto/v1703077708/icones-cv/rounded/rubriques/icone-cv-certifications_mhvifi" alt="Certifié" width="20" height="auto" class="d-inline-block align-text-top">
+                        </a>
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Sergent" data-lang-en="Sergeant">Sergent</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=_SUKUNA_FR_" target="_blank" class="text-decoration-none">
+                        <img src="https://th.bing.com/th/id/OIP.RD4xYO8L1r9qiAsW2IOm8AAAAA?rs=1&pid=ImgDetMain" alt="Sergent" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        _SUKUNA_FR_
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Sergent" data-lang-en="Sergeant">Sergent</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+            </div>
+            <!-- Membres -->
+            <h3 class="text-center mb-4" data-lang-fr="Membres" data-lang-en="Members">Membres</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=L2Son_" target="_blank" class="text-decoration-none">
+                        <img src="https://avatars.warthunder.com/img/cardicon_fr_modern_01.png" alt="Membre" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        L2Son_
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Membres" data-lang-en="Private">Privé</p>
+                    <p class="text-secondary" data-lang-fr="Mécanicien Aéronautique" data-lang-en="Aeronautical mechanic">Mécanicien Aéronautique</p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=-Shorty74-" target="_blank" class="text-decoration-none">
+                        <img src="https://avatars.warthunder.com/img/cardicon_fr_modern_01.png" alt="Membre" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        -Shorty74-
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Membres" data-lang-en="Private">Privé</p>
+                    <p class="text-secondary" data-lang-fr="Mécanicien Aéronautique" data-lang-en="Aeronautical mechanic">Mécanicien Aéronautique</p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=Jean_Boucane" target="_blank" class="text-decoration-none">
+                        <img src="https://www.lesurplus.com/9805-large_default/surplus-militaire-insignes-ecussons-grade-militaire-haute-visibilite-jaune-soldat-de-1ere-classe.jpg" alt="Secrétaire" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        Jean_Boucane
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Membres" data-lang-en="Private">Privé</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <a href="https://warthunder.com/fr/community/userinfo/?nick=Keynott" target="_blank" class="text-decoration-none">
+                        <img src="https://www.lesurplus.com/9805-large_default/surplus-militaire-insignes-ecussons-grade-militaire-haute-visibilite-jaune-soldat-de-1ere-classe.jpg" alt="Secrétaire" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        Keynott
+                        <a href="docs/wt/CAE-Keynott.pdf" target="_blank" class="text-decoration-none">
+                            <img src="https://res.cloudinary.com/jobimpact/image/upload/c_limit,w_72/f_auto/q_auto/v1703077708/icones-cv/rounded/rubriques/icone-cv-certifications_mhvifi" alt="Certifié" width="20" height="auto" class="d-inline-block align-text-top">
+                        </a>
+                    </h6>
+                    <p class="text-muted" data-lang-fr="Membres" data-lang-en="Private">Privé</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+            </div>
+            <!-- Secretariat -->
+            <h3 class="text-center mb-4" data-lang-fr="Secrétariat" data-lang-en="Secretariat">Secrétariat</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-2 text-center">
+                    <a href="https://steamcommunity.com/id/SkyRRunner" target="_blank" class="text-decoration-none">
+                        <img src="https://avatars.fastly.steamstatic.com/ccfdc5a0a8bc0d49139bfa0b19582407c1789af2_full.jpg" alt="Secrétaire" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h6>
+                        <span title="France"><img src="img/flags/france.png" alt="France Flag" width="20" height="auto" class="d-inline-block align-text-top"></span>
+                        SkyRunner
+                    </h6>
+                    <p class="text-muted"></p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+            </div>
+        </div>
+        <!-- Quotas d'Activité -->
+        <div class="text-center">
+            <a href="https://docs.google.com/spreadsheets/d/1Yghv-7wTmjIi871_hJv8s5mcCPUAc0Y2HpokRsyxHH8/edit?usp=sharing" target="_blank" class="btn btn-success btn-lg d-flex align-items-center justify-content-center">
+                <div class="me-2">
+                    <img src="https://www.gstatic.com/images/branding/product/1x/sheets_2020q4_48dp.png" alt="Google Sheets" width="30" height="30" class="me-2">
+                </div>
+                <div data-lang-fr="Quotas d'Activité" data-lang-en="Activity Quotas">Quotas d'Activité</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="mb-4" data-lang-fr="Galerie" data-lang-en="Gallery">Galerie</h2>
+            <p
+            data-lang-fr="Voici quelques images de nos batailles et événements passés :"
+            data-lang-en="Here are some pictures of our past battles and events:">
+                Voici quelques images de nos batailles et événements passés :
+            </p>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/warthunder/FrTFC_Wallpaper.png" class="d-block w-100" alt="Parade">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="img/warthunder/FrTFCParade-overlay.png" class="d-block w-100" alt="Parade">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/1750182972142161768/B1FE3DC968998CF929EDE5835B06427AB2D01D25/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/1750182972147150973/583CB0632C36DCCBC55206DF37538319E9C830C7/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/1851548635084984956/0566FEF041E5CC459A739F573C78CD945F5DD845/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/1871822070230603803/28C5FC790AE34113EF90BE3FE219B9CD2973C8A3/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/5114431931268285115/6C97EB013C29F8BE3F2E8ECEE226937F1F3BAE30/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2073385793480696751/90E3A29BEEB8340AADA8E2FBEE0F7C3B110D78B7/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2073386589078057626/7C4CE5163E743B2F2D59D7D8EA1F76086A8693C1/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2074514228586499035/A3F586125BB65EA4A2386FE1BA82A66C11336F41/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2074514953767474660/692A75BE8FD702695BD5B44401B8275C240AA7B3/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2074513917289807873/719E8F9C1CE1CB7C78A00E7B3A0CF0B63910DFF9/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2231031442144304353/7C1DCEE3D464089C48CE5BEC4FDF7EAC942D9F28/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="Convoi">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2315476805882828552/BF661C9DBEEBACF7A755CF43F30A70F5894814AD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="UH-Pilot">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/47957814095235147/F7FA56A8CBB50E513EB172E0C2A32ED298916287/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="WWI">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/warthunder/FrTFCAirParade-overlay.png" class="d-block w-100" alt="AirParade">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mods à partager -->
+    <section id="mods" class="py-5 text-center">
+        <div class="container">
+            <h2 class="mb-4">
+                <a href="https://github.com/TheColonel92/wt-sounds-mods" target="_blank" class="text-decoration-none" style="color: #000;">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github" width="30" height="30" class="d-inline-block align-text-top">
+                    <span
+                    data-lang-fr="Mods à partager"
+                    data-lang-en="Mods to share">
+                        Mods à partager
+                    </span>
+                </a>
+            </h2>
+            <h3 data-lang-fr="Étapes d'installation" data-lang-en="Installation Steps">Étapes d'installation</h3>
+            <p data-lang-fr="Pour installer les mods sonores, suivez ces étapes :" data-lang-en="To install the sound mods, follow these steps:">Pour installer les mods sonores, suivez ces étapes :</p>
+            <h4><span data-lang-fr="1. Créer le dossier" data-lang-en="1. Create the folder">1. Créer le dossier</span> <code>mod</code></h4>
+            <p><span data-lang-fr="Accédez au dossier d'installation de War Thunder et créez un nouveau dossier nommé" data-lang-en="Go to the War Thunder installation folder and create a new folder named">Accédez au dossier d'installation de War Thunder et créez un nouveau dossier nommé</span> <code>mod</code> <span data-lang-fr="dans le répertoire" data-lang-en="in the directory named">dans le répertoire</span> <code>sound/</code> <span data-lang-fr="(si ce n'est pas déjà fait)" data-lang-en="(if not already done)">(si ce n'est pas déjà fait)</span>.</p>
+            <h4 data-lang-fr="2. Télécharger les mods" data-lang-en="2. Download the mods">2. Télécharger les mods</h4>
+            <p><a href="https://github.com/TheColonel92/wt-sounds-mods/tree/main?tab=readme-ov-file#latest-version"target="_blank" style="color: #000;"><span data-lang-fr="Téléchargez les fichiers de mods sonores" data-lang-en="Download the compatible sound mod files">Téléchargez les fichiers de mods sonores</span></a> <span data-lang-fr="compatibles avec War Thunder depuis une source fiable et placez les fichiers" data-lang-en="for War Thunder from a reliable source and place the files">compatibles avec War Thunder depuis une source fiable et placez les fichiers</span> <code>.bank</code> <span data-lang-fr="dans le dossier" data-lang-en="in the folder">dans le dossier</span> <code>sound/mod/</code>.</p>
+
+            <div class="row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="card shadow-sm">
+                        <img src="https://cdn-live.warthunder.com/uploads/87/4a/92/23c08f41a4e0b1ae8b65633b27f0abb384_mq/Thunder+Radio.png" class="card-img-top" alt="Thunder Radio">
+                        <div class="card-body">
+                            <h5 class="card-title">Crew/Radio</h5>
+                            <p class="card-text" data-lang-fr="Un mod qui améliore l'expérience sonore de War Thunder en ajoutant des voix de pilotes et des effets sonores réalistes." data-lang-en="A mod that enhances the War Thunder sound experience by adding pilot voices and realistic sound effects.">Un mod qui améliore l'expérience sonore de War Thunder en ajoutant des voix de pilotes et des effets sonores réalistes.</p>
+                            <a href="https://live.warthunder.com/dl/75086c757b6bfb2f7cd31fc2658ac93710929cf6/" class="btn btn-primary">Télécharger/Download</a>
+                            <h6 class="text-muted">
+                                <a href="https://live.warthunder.com/user/107100128/" target="_blank" class="text-decoration-none" style="color: #000;">
+                                    Auteur : WoWmaker
+                                </a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card shadow-sm">
+                        <img src="https://cdn-live.warthunder.com/uploads/cb/1f/80/26ebbe0cf86547438e56d1490d8b0fcff8_mq/OPEX+3.3.2.jpg" class="card-img-top" alt="Sound Mod">
+                        <div class="card-body">
+                            <h5 class="card-title">Autre sons</h5>
+                            <p class="card-text" data-lang-fr="Un mod qui améliore les effets sonores de War Thunder pour une immersion totale." data-lang-en="A mod that enhances War Thunder's sound effects for total immersion.">Un mod qui améliore les effets sonores de War Thunder pour une immersion totale.</p>
+                            <a href="https://live.warthunder.com/dl/43c30a8633795fd098f95b1d7c47941f3463fc5a/" class="btn btn-primary">Télécharger/Download</a>
+                            <h6 class="text-muted">
+                                <a href="https://live.warthunder.com/user/36896578/" target="_blank" class="text-decoration-none" style="color: #000;">
+                                    Auteur : Général_IWSM
+                                </a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacts" class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="mb-4"
+            data-lang-fr="Contact"
+            data-lang-en="Contact">
+                Contact
+            </h2>
+            <p class="mb-3"
+            data-lang-fr="Rejoins-nous sur :"
+            data-lang-en="Join us on:">
+                Rejoins-nous sur :
+            </p>
+            <div class="d-flex justify-content-center mb-4">
+                <a href="https://warthunder.com/fr/community/claninfo/French%20tactical%20forces" class="btn btn-primary me-3" target="_blank">
+                    <img src="https://cdn2.steamgriddb.com/logo/40b28f4fc90cff423e2a75266497539f.png" alt="War Thunder" width="20" height="20" class="me-2">
+                    <span data-lang-fr="Site de l'escadron" data-lang-en="Squadron website">Site de l'escadron</span>
+                </a>
+            </div>
+            <div class="d-flex justify-content-center">
+                <iframe src="https://discord.com/widget?id=873053215606845460&theme=dark&showUsers=false" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <img src="img/FrTFC-Logo.png" alt="Logo FrTFC" class="footer-logo mb-2" />
+        <p>
+            FrTFC Headquarter © 2021—<span id="year"></span> <a href="https://thecolonel92.github.io/" target="_blank" class="text-white">TheColonel</a> | <span data-lang-fr="Tous droits réservés." data-lang-en="All rights reserved.">Tous droits réservés.</span>
+        </p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Horloge
+        function updateTime() {
+        const franceTime = new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit" });
+        const philippinesTime = new Date().toLocaleString("en-PH", { timeZone: "Asia/Manila", hour: "2-digit", minute: "2-digit" });
+        document.getElementById("time-france").textContent = `France: ${franceTime}`;
+        document.getElementById("time-philippines").textContent = `Philippines: ${philippinesTime}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Changement de langue
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+
+            const langLabel = {
+            fr: "Français",
+            en: "English",
+            tl: "Filipino"
+            };
+            document.getElementById("current-lang").textContent = langLabel[lang] || "Français";
+
+            document.querySelectorAll("[data-lang-fr]").forEach(el => {
+            el.textContent = el.getAttribute("data-lang-" + lang) || el.getAttribute("data-lang-fr");
+            });
+
+            // Mise à jour des liens
+            const links = document.querySelectorAll("a[href*='frtfc']");
+            links.forEach(link => {
+            const url = new URL(link.href, window.location.href);
+            url.pathname = url.pathname.replace(/-(fr|en|tl)\.html/, `-${lang}.html`);
+            link.href = url.pathname;
+            });
+        }
+
+        // Initialisation de la langue au chargement de la page
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLang = navigator.language.slice(0, 2);
+            const supported = ["fr", "en", "tl"];
+            const lang = supported.includes(navLang) ? navLang : "fr";
+            setLanguage(lang);
+            // Ensure the year is updated when the DOM is ready
+            function updateYear() {
+                document.getElementById("year").textContent = new Date().getFullYear();
+            }
+            updateYear();
+        });
+    </script>
+</body>
+</html>
