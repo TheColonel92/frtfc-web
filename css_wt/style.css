@@ -56,7 +56,6 @@ header .overlay{
 
 /* Membres */
 #membres {
-  background: url('../img/warthunder/WT_FRPH.png') no-repeat center center / cover;
   margin-bottom: 5px;
   font-size: 1.5rem;
 }
@@ -94,6 +93,17 @@ header .overlay{
 }
 #membres p.text-secondary {
   color: #aaa; /* Deuxième rôle en couleur secondaire */
+}
+
+/*Gallery*/
+#gallery {
+  background: url('../img/warthunder/WT_FRPH.png') no-repeat center center / cover;
+  color: white;
+}
+
+/*Contact*/
+#contacts {
+  background: url('../img/warthunder/FrTFC_Wallpaper.png') no-repeat center center / cover;
 }
 
 /* Footer */
