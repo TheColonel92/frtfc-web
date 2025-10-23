@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/foxhole/logo_foxhole-FrTFC.jpg">
+    <title>=FrTFC= French Tactical Forces - Foxhole</title>
+    <meta name="description" content="Site officiel de la communauté =FrTFC= French Tactical Forces - Foxhole.">
+    <meta name="keywords" content="FrTFC, French Tactical Forces, Foxhole, communauté, jeux vidéo, simulation militaire">
+    <meta name="author" content="TheColonel92">
+    <meta name="theme-color" content="#343a40">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="language" content="French">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <link rel="stylesheet" href="css_bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css_fox/style.css">
+</head>
+
+<body class="fox">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <!-- Logo et Titre -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/foxhole/logo_foxhole-FrTFC.jpg" alt="Logo FrTFC" width="40" height="40" class="d-inline-block align-text-top">
+                =FrTFC= French Tactical Forces - Foxhole
+            </a>
+            <!-- Hamburger menu for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Clock -->
+            <div class="d-inline-block ms-3 justify-content-center">
+                <span id="time-france" class="text-light me-3"></span>
+                <span id="time-philippines" class="text-light"></span>
+            </div>
+            <!-- Language Dropdown -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#presentation"
+                        data-lang-fr="Présentation"
+                        data-lang-en="Presentation"
+                        >Présentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#operations"
+                        data-lang-fr="Opérations"
+                        data-lang-en="Operations">Opérations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#membres"
+                        data-lang-fr="Membres"
+                        data-lang-en="Members">Membres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts"
+                        data-lang-fr="Contacts"
+                        data-lang-en="Contacts">Contacts</a>
+                    </li>
+                    <!-- Choix de site -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="siteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://static.wixstatic.com/media/dbafb3_3549fb01b9aa4bffbb21e4139b2c7300~mv2.png/v1/fill/w_499,h_197,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/NavalWarfareLogo_Large.png" alt="" width="25" height="25" class="d-inline-block align-text-top">
+                            Foxhole
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="siteDropdown">
+                            <li><a class="dropdown-item" href="frtfc-warthunder.html">
+                                <img src="https://cdn2.steamgriddb.com/logo/40b28f4fc90cff423e2a75266497539f.png" alt="" width="25" height="25" class="d-inline-block align-text-top">
+                                War Thunder
+                            </a></li>
+                        </ul>
+                    </li>
+                    <!-- Selection des langues -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            🌐 <span id="current-lang">Français</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" onclick="setLanguage('fr')"><img src="https://em-content.zobj.net/source/twitter/408/flag-france_1f1eb-1f1f7.png" alt="" width="25" height="25" class="d-inline-block align-text-top"> Français</a></li>
+                            <li><a class="dropdown-item" onclick="setLanguage('en')"><img src="https://em-content.zobj.net/source/twitter/408/flag-united-kingdom_1f1ec-1f1e7.png" alt="" width="25" height="25" class="d-inline-block align-text-top"> English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Présentation avec image de fond -->
+    <header class="text-center text-white">
+        <div class="overlay">
+            <h1 class="display-3" data-lang-fr="Bienvenue chez la FrTFC" data-lang-en="Welcome to the FrTFC" >Bienvenue chez la FrTFC</h1>
+            <p class="lead" data-lang-fr="Régiment Warden spécialisé en reconnaissance, combat, logistique et artillerie. Nous excellons dans la collecte d'informations, les assauts, le soutien logistique et les frappes d'artillerie précises." data-lang-en="Warden regiment specializing in reconnaissance, combat, logistics, and artillery. We excel in intelligence gathering, assaults, logistical support, and precise artillery strikes." >Régiment Warden spécialisé en reconnaissance, combat, logistique et artillerie. Nous excellons dans la collecte d'informations, les assauts, le soutien logistique et les frappes d'artillerie précises.</p>
+            <a href="#presentation" class="btn btn-primary mt-3" data-lang-fr="En savoir plus" data-lang-en="Learn more" >En savoir plus</a>
+        </div>
+    </header>
+    
+    <!-- Présentation -->
+    <section id="presentation" class="py-5">
+        <div class="container">
+            <h1 class="text-center" data-lang-fr="Présentation du Régiment" data-lang-en="Regiment Presentation" >Présentation du Régiment</h1>
+            <p class="text-center" data-lang-fr="Nous sommes un régiment francophone actif et organisé, prêt à mener notre faction vers la victoire grâce à une stratégie bien rodée et un travail d'équipe inégalé. Notre régiment se distingue par son engagement et sa détermination à exceller dans divers domaines tels que la reconnaissance, le combat de première ligne, la logistique et l'artillerie. Nous croyons fermement que la clé de notre succès réside dans la coordination et la communication efficaces entre nos membres, ce qui nous permet de surmonter les défis et de remporter des victoires décisives sur le champ de bataille." data-lang-en="We are an active and organized French-speaking regiment, ready to lead our faction to victory through well-honed strategy and unparalleled teamwork. Our regiment stands out for its commitment and determination to excel in various fields such as reconnaissance, frontline combat, logistics, and artillery. We firmly believe that the key to our success lies in effective coordination and communication among our members, enabling us to overcome challenges and achieve decisive victories on the battlefield." >Nous sommes un régiment francophone actif et organisé, prêt à mener notre faction vers la victoire grâce à une stratégie bien rodée et un travail d'équipe inégalé. Notre régiment se distingue par son engagement et sa détermination à exceller dans divers domaines tels que la reconnaissance, le combat de première ligne, la logistique et l'artillerie. Nous croyons fermement que la clé de notre succès réside dans la coordination et la communication efficaces entre nos membres, ce qui nous permet de surmonter les défis et de remporter des victoires décisives sur le champ de bataille.</p>
+        </div>
+    </section>
+    
+    <!-- Opérations avec cartes -->
+    <section id="operations" class="bg-light py-5 text-center">
+        <div class="container">
+            <h1 class="mb-4" data-lang-fr="Nos Opérations" data-lang-en="Our Operations" >Nos Opérations</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="https://static.wikia.nocookie.net/foxhole_gamepedia_en/images/2/2e/Drummond_Spitfire_100d.png/revision/latest/scale-to-width-down/250?cb=20211128160806" class="card-img-top" alt="Reconnaissance">
+                        <div class="card-body">
+                            <h5 class="card-title" data-lang-fr="Reconnaissance" data-lang-en="Reconnaissance" >Reconnaissance</h5>
+                            <p class="card-text" data-lang-fr="Nous localisons et surveillons les mouvements ennemis pour assurer une stratégie efficace." data-lang-en="We locate and monitor enemy movements to ensure an effective strategy." >Nous localisons et surveillons les mouvements ennemis pour assurer une stratégie efficace.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="https://www.nme.com/wp-content/uploads/2021/09/Foxhole-bridge-2000x1270-1.jpg" class="card-img-top" alt="Combat de première ligne">
+                        <div class="card-body">
+                            <h5 class="card-title" data-lang-fr="Combat de première ligne" data-lang-en="Frontline Combat" >Combat de première ligne</h5>
+                            <p class="card-text" data-lang-fr="Nous menons des assauts organisés pour percer les défenses ennemies." data-lang-en="We lead organized assaults to break through enemy defenses." >Nous menons des assauts organisés pour percer les défenses ennemies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="https://foxhole.wiki.gg/images/thumb/2/22/Huber_Lariat_Screenshot.jpg/480px-Huber_Lariat_Screenshot.jpg" class="card-img-top" alt="Artillerie">
+                        <div class="card-body">
+                            <h5 class="card-title" data-lang-fr="Artillerie" data-lang-en="Artillery">Artillerie</h5>
+                            <p class="card-text" data-lang-fr="Nos tirs de barrage assurent le soutien des troupes en première ligne." data-lang-en="Our barrages provide support for troops on the front line.">Nos tirs de barrage assurent le soutien des troupes en première ligne.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Membres -->
+    <section id="membres" class="py-5 text-center">
+        <div class="container">
+            <h1 class="mb-4" data-lang-fr="Nos Membres" data-lang-en="Our Members">Nos Membres</h1>
+            <p data-lang-fr="Liste des officiers et soldats du régiment." data-lang-en="List of officers and soldiers of the regiment.">Liste des officiers et soldats du régiment.</p>
+            <!-- Commandant -->
+            <div class="text-center mb-5">
+                <a href="https://steamcommunity.com/id/TheColonel92/"  target="_blank">
+                    <img src="https://avatars.cloudflare.steamstatic.com/381f3961a4ab41cf404679bea83a59d8027537ed_full.jpg" alt="CMD" class="rounded-circle member-img mb-2">
+                </a>
+                <h4>TheColonel92</h4>
+                <p class="text-muted" data-lang-fr="Commandant" data-lang-en="Commander">Commandant</p>
+                <p class="text-secondary">
+                    <a href="https://thecolonel92.github.io/portfolio/"  target="_blank" data-lang-fr="Étudiant" data-lang-en="Student">Étudiant</a>
+                </p>
+            </div>
+            
+            <!-- Officiers -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-4 text-center">
+                    <a href="https://steamcommunity.com/id/tie471"  target="_blank">
+                        <img src="https://avatars.cloudflare.steamstatic.com/e8978c15423ffeedef606e600f6fef5ef6443103_full.jpg" alt="Officier" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h5>TeRz_______</h5>
+                    <p class="text-muted" data-lang-fr="Officier" data-lang-en="Officer">Officier</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="https://steamcommunity.com/id/chara_ka"  target="_blank">
+                        <img src="https://avatars.cloudflare.steamstatic.com/936af514f7e63058123e6ec749aaa5bd10285dae_full.jpg" alt="Officier" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h5>chara27</h5>
+                    <p class="text-muted" data-lang-fr="Officier" data-lang-en="Officer">Officier</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="https://steamcommunity.com/profiles/76561198150167110"  target="_blank">
+                        <img src="https://avatars.cloudflare.steamstatic.com/798f883949ed606c03cbb802788a979bc616087d_full.jpg" alt="Député" class="rounded-circle member-img mb-2">
+                    </a>
+                    <h5>Red_Toundra</h5>
+                    <p class="text-muted" data-lang-fr="Officier" data-lang-en="Officer">Officier</p>
+                    <p class="text-secondary" data-lang-fr="" data-lang-en=""></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="bg-light py-5">
+        <div class="container text-center">
+            <h1 class="mb-4" data-lang-fr="Galerie" data-lang-en="Gallery">Galerie</h1>
+            <p data-lang-fr="Voici quelques images de nos batailles et événements passés :" data-lang-en="">Voici quelques images de nos batailles et événements passés :</p>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.steamusercontent.com/ugc/2151090095899364585/C75D60BB2448E2D294D15B4320D7272AB9CFB39D/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2151090095909455727/27357C02BCD3573CAF71AF6060DAFD57F3F254E2/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="FightClub">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2151091276276493311/9C4205A0AB349BA854FDE085EB8C8D3E94D5285C/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2259179664325835325/FC9E67D53DEC49BFD7D2BC603CC484452E169C6D/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2315475112749202763/94BCC4CCD4AD68525A0D33B257021F57BE2CFCB0/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2315475112753135267/8AFBCFF5EF5BD709B4C93B8C9FDEFDF132EAECB3/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2315475838556189966/74B9C73EABA7D8839589B2780E66CFED97A99ECA/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2315475838556190272/DBCEB7804589FE3E39971F37F25A9962C732CAB8/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2315475838556190460/E8542EFB091B2BFAF2E181B7FFB9EECA479ABD91/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/2315475838556523597/11391F9DAD86FA5CE89903A3BC383894BD9BF706/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="Ending of the war">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/47952110325404651/E8549859458E7A8BD12B0AE980905C3B7C86996E/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.steamusercontent.com/ugc/47952744303740083/1FC90FA9C90BD06673BB4F103CC6153A1DEE1804/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section id="contacts" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4"
+            data-lang-fr="Contact"
+            data-lang-en="Contact">
+                Contact
+            </h2>
+            <p class="mb-3"
+            data-lang-fr="Rejoins-nous sur :"
+            data-lang-en="Join us on:">
+                Rejoins-nous sur :
+            </p>
+            <div class="d-flex justify-content-center">
+                <iframe src="https://discord.com/widget?id=873053215606845460&theme=dark&showUsers=false" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <img src="img/FrTFC-Logo.png" alt="Logo FrTFC" class="footer-logo mb-2" />
+        <p>
+            FrTFC Headquarter - Foxhole © 2023—<span id="year"></span> <a href="https://thecolonel92.github.io/" target="_blank" class="text-white">TheColonel</a> | <span data-lang-fr="Tous droits réservés." data-lang-en="All rights reserved.">Tous droits réservés.</span>
+        </p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Horloge
+        function updateTime() {
+        const franceTime = new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit" });
+        const philippinesTime = new Date().toLocaleString("en-PH", { timeZone: "Asia/Manila", hour: "2-digit", minute: "2-digit" });
+        document.getElementById("time-france").textContent = `France: ${franceTime}`;
+        document.getElementById("time-philippines").textContent = `Philippines: ${philippinesTime}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Changement de langue
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+
+            const langLabel = {
+            fr: "Français",
+            en: "English",
+            tl: "Filipino"
+            };
+            document.getElementById("current-lang").textContent = langLabel[lang] || "Français";
+
+            document.querySelectorAll("[data-lang-fr]").forEach(el => {
+            el.textContent = el.getAttribute("data-lang-" + lang) || el.getAttribute("data-lang-fr");
+            });
+        }
+
+        // Initialisation de la langue au chargement de la page
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLang = navigator.language.slice(0, 2);
+            const supported = ["fr", "en", "tl"];
+            const lang = supported.includes(navLang) ? navLang : "fr";
+            setLanguage(lang);
+            // Ensure the year is updated when the DOM is ready
+            function updateYear() {
+                document.getElementById("year").textContent = new Date().getFullYear();
+            }
+            updateYear();
+        });
+    </script>
+</body>
+</html>
