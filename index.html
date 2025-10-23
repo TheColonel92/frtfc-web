@@ -135,7 +135,7 @@
       </div>
       <!-- Foxhole -->
       <div class="col-md-5">
-        <a href="frtfc-foxhole-fr.html" class="text-decoration-none">
+        <a href="frtfc-foxhole.html" class="text-decoration-none">
           <div class="card bg-dark text-white border-0 shadow site-choice" style="background-image: url('img/foxhole/foxhole_banner.jpg');">
             <div class="card-body">
               <h2 class="card-title"
@@ -206,14 +206,6 @@
         document.querySelectorAll("[data-lang-fr]").forEach(el => {
         el.textContent = el.getAttribute("data-lang-" + lang) || el.getAttribute("data-lang-fr");
         });
-
-        // Mise à jour des liens
-        const links = document.querySelectorAll("a[href*='frtfc']");
-        links.forEach(link => {
-        const url = new URL(link.href, window.location.href);
-        url.pathname = url.pathname.replace(/-(fr|en|tl)\.html/, `-${lang}.html`);
-        link.href = url.pathname;
-        });
     }
 
     // Initialisation de la langue au chargement de la page
@@ -231,5 +223,6 @@
   </script>
 </body>
 </html>
+
 
 
