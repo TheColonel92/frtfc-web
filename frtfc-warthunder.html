@@ -613,12 +613,28 @@
                     Ajoutez ou modifiez les lignes suivantes :
                   </span>
                 </p>
-                <pre class="text-start"><code>
+                <!-- Zone de code copiable -->
+                <div class="position-relative">
+                  <button class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2" onclick="copyCode()">Copier</button>
+                  <pre><code id="codeBlock">
             sound {
               fmod_sound_enable:b=yes
               enable_mod:b=yes
             }
-                </code></pre>
+                  </code></pre>
+                </div>
+              </li>
+            </ul>
+            
+            <!-- Script de copie -->
+            <script>
+              function copyCode() {
+                const code = document.getElementById("codeBlock").innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                  alert("Code copié !");
+                });
+              }
+            </script>
               </li>
             </ul>
 
@@ -703,6 +719,7 @@
 </body>
 
 </html>
+
 
 
 
