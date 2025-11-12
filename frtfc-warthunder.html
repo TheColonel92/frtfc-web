@@ -625,7 +625,7 @@
                 </div>
             </div>
 
-            <h4>
+            <h4 class="mt-4">
                 <span data-lang-fr="3. Modifier le fichier" data-lang-en="3. Edit the file">3. Modifier le fichier</span> <code>config.blk</code>
             </h4>
             <ul class="list-unstyled">
@@ -646,13 +646,13 @@
                             </span>
                         </p>
                         <!-- Zone de code copiable -->
-                        <div class="position-relative">
+                        <div class="position-relative" style="max-width: 300px; background-color: #0d1117;">
                             <button class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2" onclick="copyCode()">Copier</button>
-                            <pre><code id="codeBlock">
-                                sound {
-                                fmod_sound_enable:b=yes
-                                enable_mod:b=yes
-                                }
+                            <pre><code id="codeBlock" style="color: white;">
+    sound {
+        fmod_sound_enable:b=yes
+        enable_mod:b=yes
+    }
                             </code></pre>
                         </div>
                     </ul>
